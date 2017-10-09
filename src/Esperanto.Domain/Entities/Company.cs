@@ -9,7 +9,6 @@ namespace Esperanto.Domain.Entities
 {
     public class Company
     {
-
         #region Properties
         /// <summary>
         /// Company ID
