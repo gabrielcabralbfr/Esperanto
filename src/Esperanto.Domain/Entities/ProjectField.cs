@@ -6,34 +6,37 @@ using System.Threading.Tasks;
 
 namespace Esperanto.Domain.Entities
 {
-    public class CompanyLog
+    public class ProjectField
     {
+
         #region Properties
 
         /// <summary>
-        /// CompanyLog ID
+        /// ID do campo
         /// </summary>
-        public Guid CompanyLogId{ get; set; }
+        public Guid ProjectFieldId { get; set; }
 
         /// <summary>
-        /// Data de criação do Log
+        /// Nome do campo
         /// </summary>
-        public DateTime CreatedOn{ get; set; }
+        public string Name { get; set; }
 
         /// <summary>
-        /// Descrição do log
+        /// Posição do campo 
         /// </summary>
-        public string Description { get; set; }]
+        public int OrderPosition { get; set; }
 
         /// <summary>
-        /// ID da empresa desse log
+        /// FK para entidade Project
         /// </summary>
-        public Guid CompanyId { get; set; }
+        public Guid ProjectId { get; set; }
 
         /// <summary>
-        /// Empresa desse log
+        /// Projeto desse Campo
         /// </summary>
-        public Company Company { get; set; }
+        public Project Project { get; set; }
+
         #endregion
+
     }
 }

@@ -24,6 +24,7 @@ namespace Esperanto.Domain.Entities
         #endregion
 
         #region Properties
+
         /// <summary>
         /// ID do usuário
         /// </summary>
@@ -68,26 +69,6 @@ namespace Esperanto.Domain.Entities
         /// Key para API
         /// </summary>
         public Guid ApiKey { get; set; }
-
-        /// <summary>
-        /// FK para a entidade Company
-        /// </summary>
-        public Guid CompanyId { get; set; }
-
-        /// <summary>
-        /// Lista de Company do usuário
-        /// </summary>
-        public List<Company> Company { get; set; }
-
-        /// <summary>
-        /// FK para a entidade UserLog
-        /// </summary>
-        public Guid UserLogId { get; set; }
-
-        /// <summary>
-        /// Lista de UserLogs do usuário
-        /// </summary>
-        public List<UserLog> UserLogs { get; set; }
 
         #endregion
 

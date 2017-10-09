@@ -26,31 +26,10 @@ namespace Esperanto.Domain.Entities
         public DateTime CreatedOn { get; set; }
 
         /// <summary>
-        /// Descrição da empresa
-        /// </summary>
-        public string Description { get; set; }
-
-        /// <summary>
         /// Status da empresa
         /// </summary>
         public ECompanyStatus CompanyStatus { get; set; }
 
-        /// <summary>
-        /// FK para a entidade do Usuário
-        /// </summary>
-        public Guid UserId { get; set; }
-
-        /// <summary>
-        /// Lista de usuários dessa empresa
-        /// </summary>
-        public List<User> Users { get; set; }
-
-        /// <summary>
-        /// ID do Projeto 
-        /// </summary>
-        public Guid ProjectId { get; set; }
-
-        public List<Project> MyProperty { get; set; }
 
         #endregion
 

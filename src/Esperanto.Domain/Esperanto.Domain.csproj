@@ -37,9 +37,14 @@
   <ItemGroup>
     <Compile Include="Entities\Company.cs" />
     <Compile Include="Entities\CompanyLog.cs" />
+    <Compile Include="Entities\Project.cs" />
+    <Compile Include="Entities\ProjectField.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\UserLog.cs" />
     <Compile Include="Enums\Company\ECompanyStatus.cs" />
+    <Compile Include="Enums\Project\EFileType.cs" />
+    <Compile Include="Enums\Project\EProjectStatus.cs" />
+    <Compile Include="Enums\Project\ESendType.cs" />
     <Compile Include="Enums\User\EUserRole.cs" />
     <Compile Include="Enums\User\EUserStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
