@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{E77FF0E3-67F8-4EF7-913B-BFBBB1B8630E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application Service", "2 - Application Service", "{08880CD0-E64A-4B68-AEFB-E0E2B954E425}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{CF8DE652-0AEC-42BD-9461-BE5F6E2AAFC6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infrastructure", "4 - Infrastructure", "{E35BC104-8224-40E9-9739-C0D317F0BA51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Tests", "5 - Tests", "{8F3D9DF5-0C8E-41C8-A556-E6EEEEFB5B8F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", "{CE8A6792-E4B0-4B39-8126-E0E852B3AD52}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - Crosscutting", "4.2 - Crosscutting", "{93933419-3016-43D6-8D70-832082F351FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Esperanto.Domain", "src\Esperanto.Domain\Esperanto.Domain.csproj", "{BE39260F-2376-4C38-840E-31A86B6BA3AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE39260F-2376-4C38-840E-31A86B6BA3AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE39260F-2376-4C38-840E-31A86B6BA3AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE39260F-2376-4C38-840E-31A86B6BA3AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE39260F-2376-4C38-840E-31A86B6BA3AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CE8A6792-E4B0-4B39-8126-E0E852B3AD52} = {E35BC104-8224-40E9-9739-C0D317F0BA51}
+		{93933419-3016-43D6-8D70-832082F351FD} = {E35BC104-8224-40E9-9739-C0D317F0BA51}
+		{BE39260F-2376-4C38-840E-31A86B6BA3AB} = {CF8DE652-0AEC-42BD-9461-BE5F6E2AAFC6}
+	EndGlobalSection
+EndGlobal
