@@ -92,6 +92,26 @@ namespace Esperanto.Domain.Entities
         /// </summary>
         public ProjectIntegration ProjectIntegration { get; set; }
 
+
+        /// <summary>
+        /// FK - ID do Log do Projeto
+        /// </summary>
+        public Guid ProjectLogId { get; set; }
+
+        /// <summary>
+        /// Project Logs do projeto
+        /// </summary>
+        public List<ProjectLog> ProjectLogs { get; set; }
+
+        /// <summary>
+        /// FK - Project Field ID
+        /// </summary>
+        public Guid ProjectField { get; set; }
+
+        /// <summary>
+        /// Lista de Project Fields do Projeto
+        /// </summary>
+        public List<ProjectField> ProjectFields { get; set; }
         #endregion
 
     }

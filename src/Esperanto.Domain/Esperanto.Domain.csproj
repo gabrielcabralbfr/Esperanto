@@ -39,7 +39,10 @@
     <Compile Include="Entities\CompanyLog.cs" />
     <Compile Include="Entities\Project.cs" />
     <Compile Include="Entities\ProjectField.cs" />
+    <Compile Include="Entities\ProjectIntegration.cs" />
+    <Compile Include="Entities\ProjectLog.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\UserCompany.cs" />
     <Compile Include="Entities\UserLog.cs" />
     <Compile Include="Enums\Company\ECompanyStatus.cs" />
     <Compile Include="Enums\Project\EFileType.cs" />

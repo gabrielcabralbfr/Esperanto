@@ -30,7 +30,15 @@ namespace Esperanto.Domain.Entities
         /// </summary>
         public ECompanyStatus CompanyStatus { get; set; }
 
+        /// <summary>
+        /// Company Log ID
+        /// </summary>
+        public Guid CompanyLogId { get; set; }
 
+        /// <summary>
+        /// CompanyLog
+        /// </summary>
+        public List<CompanyLog> CompanyLog { get; set; }
         #endregion
 
     }

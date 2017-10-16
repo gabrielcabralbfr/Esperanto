@@ -70,6 +70,15 @@ namespace Esperanto.Domain.Entities
         /// </summary>
         public Guid ApiKey { get; set; }
 
+        /// <summary>
+        /// UserLog ID
+        /// </summary>
+        public Guid UserLogId { get; set; }
+
+        /// <summary>
+        /// UserLogs
+        /// </summary>
+        public List<UserLog> UserLogs { get; set; }
         #endregion
 
     }
