@@ -25,6 +25,13 @@ namespace Esperanto.Domain.Entities
         /// </summary>
         public DateTime CreatedOn { get; set; }
 
+
+        /// <summary>
+        /// Data de modificação da empresa no sistema
+        /// </summary>
+        public DateTime ModifiedOn { get; set; }
+
+
         /// <summary>
         /// Status da empresa
         /// </summary>
@@ -38,7 +45,19 @@ namespace Esperanto.Domain.Entities
         /// <summary>
         /// CompanyLog
         /// </summary>
-        public List<CompanyLog> CompanyLog { get; set; }
+        public List<CompanyLog> CompanyLogs { get; set; }
+
+        /// <summary>
+        /// Project  ID
+        /// </summary>
+        public Guid ProjectId { get; set; }
+
+        /// <summary>
+        /// Projects
+        /// </summary>
+        public List<Project> Projects { get; set; }
+
+
         #endregion
 
     }
