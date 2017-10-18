@@ -27,6 +27,11 @@ namespace Esperanto.Domain.Entities
         /// </summary>
         public string Description { get; set; }
 
+        /// <summary>
+        /// Tipo de log gerado
+        /// </summary>
+        public ELogType LogType { get; set; }
+
 
         /// <summary>
         /// ID do projeto

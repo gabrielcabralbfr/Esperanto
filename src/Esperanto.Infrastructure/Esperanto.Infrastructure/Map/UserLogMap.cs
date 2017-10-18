@@ -1,11 +1,9 @@
 ﻿using Esperanto.Domain.Entities;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Esperanto.Infrastructure.Map
 {
@@ -31,12 +29,15 @@ namespace Esperanto.Infrastructure.Map
             // Mapeando para o banco propriedade Description 
             Property(ul => ul.Description)
                 .HasColumnType("nvarchar")
-                .HasMaxLength(500)
+                .HasMaxLength(250)
                 .IsRequired();
 
 
-            // Definindo relacionamento
-            HasRequired(ul => ul.User);
+            /* Relacionamentos */
+            HasRequired(ul => ul.User)
+                .WithMany(u => u.UserLogs);
+
+            
         }
 
     }

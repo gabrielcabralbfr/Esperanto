@@ -106,7 +106,7 @@ namespace Esperanto.Domain.Entities
         /// <summary>
         /// FK - Project Field ID
         /// </summary>
-        public Guid ProjectField { get; set; }
+        public Guid ProjectFieldId { get; set; }
 
         /// <summary>
         /// Lista de Project Fields do Projeto

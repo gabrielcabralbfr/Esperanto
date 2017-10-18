@@ -1,6 +1,8 @@
 ﻿using Esperanto.Domain.Entities;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
+using System.Linq;
+using System;
 
 
 namespace Esperanto.Infrastructure.Map
@@ -24,17 +26,20 @@ namespace Esperanto.Infrastructure.Map
             Property(u => u.Name)
                 .HasColumnName("Name")
                 .HasColumnType("nvarchar")
+                .HasMaxLength(100)
                 .IsRequired();
 
             // Mapeando para o banco propriedade Email 
             Property(u => u.Email)
                 .HasColumnName("Email")
                 .HasColumnType("nvarchar")
+                .HasMaxLength(100)
                 .IsRequired();
 
             // Mapeando para o banco propriedade Password
             Property(u => u.Password)
                 .HasColumnName("Password")
+                .HasMaxLength(50)
                 .HasColumnType("nvarchar")
                 .IsRequired();
 
@@ -58,10 +63,6 @@ namespace Esperanto.Infrastructure.Map
             Property(u => u.ApiKey)
                 .IsRequired();
 
-
-            // Definindo relacionamento
-            HasMany(u => u.UserLogs)
-                .WithRequired(ul => ul.User);
         }
     }
 }

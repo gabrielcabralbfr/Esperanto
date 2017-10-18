@@ -1,11 +1,9 @@
 ﻿using Esperanto.Domain.Entities;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Esperanto.Infrastructure.Map
 {
@@ -42,13 +40,6 @@ namespace Esperanto.Infrastructure.Map
                 .HasColumnType("nvarchar")
                 .IsRequired();
 
-            // Definindo relacionamento com a entidade CompanyLogs
-            HasMany(c => c.CompanyLogs)
-                .WithRequired(cl => cl.Company);
-
-            // Definindo relacionamento com a entidade Project
-            HasMany(c => c.Projects)
-                .WithRequired(p => p.Company);
         }
     }
 }

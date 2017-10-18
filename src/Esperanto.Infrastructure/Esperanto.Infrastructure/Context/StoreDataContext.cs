@@ -1,11 +1,8 @@
-﻿using Esperanto.Domain.Entities;
+﻿using Esperanto.Infrastructure.Map;
 using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Esperanto.Infrastructure.Context
 {
@@ -73,6 +70,15 @@ namespace Esperanto.Infrastructure.Context
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+
+            modelBuilder.Configurations.Add(new CompanyLogMap());
+            modelBuilder.Configurations.Add(new CompanyMap());
+            modelBuilder.Configurations.Add(new ProjectIntegrationMap());
+            modelBuilder.Configurations.Add(new ProjectLogMap());
+            modelBuilder.Configurations.Add(new ProjectMap());
+            modelBuilder.Configurations.Add(new UserCompanyMap());
+            modelBuilder.Configurations.Add(new UserLogMap());
+            modelBuilder.Configurations.Add(new UserMap());
 
         }
 

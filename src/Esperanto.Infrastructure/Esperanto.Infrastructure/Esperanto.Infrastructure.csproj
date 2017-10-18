@@ -44,7 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\StoreDataContext.cs" />
+    <Compile Include="Map\CompanyLogMap.cs" />
     <Compile Include="Map\CompanyMap.cs" />
+    <Compile Include="Map\ProjectIntegrationMap.cs" />
+    <Compile Include="Map\ProjectLogMap.cs" />
+    <Compile Include="Map\ProjectMap.cs" />
+    <Compile Include="Map\UserCompanyMap.cs" />
     <Compile Include="Map\UserLogMap.cs" />
     <Compile Include="Map\UserMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -45,12 +45,16 @@
     <Compile Include="Entities\UserCompany.cs" />
     <Compile Include="Entities\UserLog.cs" />
     <Compile Include="Enums\Company\ECompanyStatus.cs" />
+    <Compile Include="Enums\ProjectLog\ELogType.cs" />
     <Compile Include="Enums\Project\EFileType.cs" />
     <Compile Include="Enums\Project\EProjectStatus.cs" />
     <Compile Include="Enums\Project\ESendType.cs" />
     <Compile Include="Enums\User\EUserRole.cs" />
     <Compile Include="Enums\User\EUserStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ICompanyRepository.cs" />
+    <Compile Include="Repositories\IProjectRepository.cs" />
+    <Compile Include="Repositories\IUserRepository.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
