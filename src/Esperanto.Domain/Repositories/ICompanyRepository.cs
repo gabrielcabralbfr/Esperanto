@@ -47,5 +47,12 @@ namespace Esperanto.Domain.Repositories
         /// <param name="companyId">ID da Company a ser buscada</param>
         /// <returns>Retorna a Company com o ID informado</returns>
         Company Get(string companyId);
+
+        /// <summary>
+        /// Método para buscar projetos de uma determinada Company
+        /// </summary>
+        /// <param name="company">Company a qual deseja-se obter os projetos</param>
+        /// <returns>Retorna Lista de Projects da Company passada no parâmetro</returns>
+        List<Company> GetProjects(Company company);
     }
 }

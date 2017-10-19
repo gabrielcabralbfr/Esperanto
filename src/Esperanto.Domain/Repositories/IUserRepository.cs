@@ -10,7 +10,7 @@ namespace Esperanto.Domain.Repositories
         /// <summary>
         /// Método para trazer todos os usuários
         /// </summary>
-        /// <returns>Retorna todos os usuários</returns>
+        /// <returns>Retorna List<User> - Todos os usuários</returns>
         List<User> Get();
 
 
@@ -19,15 +19,59 @@ namespace Esperanto.Domain.Repositories
         /// </summary>
         /// <param name="skip">Quantidade de usuários que serão desconsiderados</param>
         /// <param name="take">Quantidade de usuários que serão considerados</param>
-        /// <returns>Retorna a quantidade de usuários informada, excluindo quantos usuários foram informados</returns>
+        /// <returns>Retorna List<User> - Quantidade de usuários informada, excluindo quantos usuários foram informados</returns>
         List<User> Get(int skip, int take);
+
+        /// <summary>
+        /// Método para buscar os Projects aos quais o Usuário tem acesso
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns>Retorna List<Project> que o usuário pode acessar </returns>
+        List<Project> GetProjects(User user);
 
         /// <summary>
         /// Método para buscar usuário pelo ID
         /// </summary>
         /// <param name="userID">ID do usuário a ser buscado</param>
-        /// <returns>Retorna o usuário que possui o ID informado</returns>
+        /// <returns>Retorna um User que possui o ID informado</returns>
         User GetById(Guid userID);
+
+        /// <summary>
+        /// Método para buscar usuário pelo email
+        /// </summary>
+        /// <param name="email">email do usuário a ser buscado</param>
+        /// <returns>Retorna um User que possui o email informado</returns>
+        User GetByEmail(string email);
+
+        /// <summary>
+        /// Método para buscar os usuários ativos
+        /// </summary>
+        /// <returns>Retorna List<User> dos usuários com status ativo </returns>
+        List<User> GetActives();
+
+        /// <summary>
+        /// Método para buscar os usuários inativos
+        /// </summary>
+        /// <returns>Retorna List<User> dos usuários com status inativo </returns>
+        List<User> GetInactives();
+
+        /// <summary>
+        /// Método para buscar todos os usuários com ROLE = Admin
+        /// </summary>
+        /// <returns>Retorna Lista de usuários com Role = Admin</returns>
+        List<User> GetAdminUsers();
+
+        /// <summary>
+        /// Método para buscar todos os usuários com ROLE = Collaborator
+        /// </summary>
+        /// <returns>Retorna Lista de usuários com Role = Collaborator</returns>
+        List<User> GetCollaboratorUsers();
+
+        /// <summary>
+        /// Método para buscar todos os usuários com ROLE = Client
+        /// </summary>
+        /// <returns>Retorna Lista de usuários com Role = Client</returns>
+        List<User> GetClientUsers();
 
         /// <summary>
         /// Método para criar o usuário

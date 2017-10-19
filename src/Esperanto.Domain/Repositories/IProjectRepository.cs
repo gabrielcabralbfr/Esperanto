@@ -31,7 +31,7 @@ namespace Esperanto.Domain.Repositories
         /// Método para buscar todos os Projects
         /// </summary>
         /// <returns>Retorna todos os Projects criados</returns>
-        List<Company> Get();
+        List<Project> Get();
 
         /// <summary>
         /// Método para buscar Projects, informando quantas deseja buscar e quantas deseja pular
@@ -39,13 +39,32 @@ namespace Esperanto.Domain.Repositories
         /// <param name="skip">Quantidade de Projects a ser desconsiderado</param>
         /// <param name="take">Quantidade de Projects que deseja obter</param>
         /// <returns></returns>
-        List<Company> Get(int skip, int take);
+        List<Project> Get(int skip, int take);
 
         /// <summary>
         /// Método para buscar Project por ID
         /// </summary>
-        /// <param name="companyId">ID do Projects a ser buscado</param>
+        /// <param name="projectId">ID do Projects a ser buscado</param>
         /// <returns>Retorna o Project com o ID informado</returns>
-        Company Get(string companyId);
+        Project GetById(string projectId);
+
+        /// <summary>
+        /// Método para buscar todos os projetos ativos
+        /// </summary>
+        /// <returns>Retorna uma Lista com os Projects ativos</returns>
+        List<Project> GetActive();
+
+        /// <summary>
+        /// Método para buscar todos os projetos insativos
+        /// </summary>
+        /// <returns>Retorna uma Lista com os Projects inativos</returns>
+        List<Project> GetInactive();
+
+        /// <summary>
+        /// Método para buscar projetos de uma determinada Company
+        /// </summary>
+        /// <param name="company">Company a qual deseja-se obter os projetos</param>
+        /// <returns>Retorna Lista de Projects da Company passada no parâmetro</returns>
+        List<Project> GetProjectsFromCompany(Company company);
     }
 }
