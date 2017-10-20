@@ -1,31 +1,37 @@
-﻿using Esperanto.Domain.Enums.User;
+﻿using Esperanto.Domain.Entities;
+using Esperanto.Domain.Enums.User;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Esperanto.Domain.Entities
+namespace Esperanto.Domain.Commands.UserCommands
 {
-    public class User
+    public class CreateUserCommand
     {
         #region Constructor
-        public User(string name, string email, string password, EUserRole userRole)
+
+        /// <summary>
+        ///  Construtor que recebe os atributos do Objeto User a ser criado
+        /// </summary>
+        /// <param name="email">E-mail do usuário</param>
+        /// <param name="password">Senha do usuário</param>
+        /// <param name="name">Nome do usuário</param>
+        /// <param name="userRole">Perfil do usuário</param>
+        public CreateUserCommand(string email, string password, string name, EUserRole userRole)
         {
-            UserId = Guid.NewGuid();
-            this.Name = name;
             this.Email = email;
             this.Password = password;
-            CreatedOn = DateTime.Now;
+            this.Name = name;
+            this.UserRole = userRole;
+            this.CreatedOn = DateTime.Now;
             this.UserStatus = EUserStatus.Active;
-            UserRole = userRole;
 
         }
         #endregion
 
         #region Properties
-
-        /// <summary>
-        /// ID do usuário
-        /// </summary>
-        public Guid UserId { get; set; }
 
         /// <summary>
         /// Nome do usuário
@@ -62,21 +68,6 @@ namespace Esperanto.Domain.Entities
         /// </summary>
         public EUserRole UserRole { get; set; }
 
-        /// <summary>
-        /// Key para API
-        /// </summary>
-        public Guid ApiKey { get; set; }
-
-        /// <summary>
-        /// UserLog ID
-        /// </summary>
-        public Guid UserLogId { get; set; }
-
-        /// <summary>
-        /// UserLogs
-        /// </summary>
-        public List<UserLog> UserLogs { get; set; }
         #endregion
-
     }
 }

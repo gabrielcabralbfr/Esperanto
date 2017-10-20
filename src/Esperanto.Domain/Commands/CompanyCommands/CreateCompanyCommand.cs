@@ -1,11 +1,29 @@
 ﻿using Esperanto.Domain.Enums.Company;
 using System;
-using System.Collections.Generic;
 
-namespace Esperanto.Domain.Entities
+
+namespace Esperanto.Domain.Commands.CompanyCommands
 {
-    public class Company
+    public class CreateCompanyCommand
     {
+
+        #region Constructor
+
+        /// <summary>
+        /// Construtor que recebe atributos do Objeto Company a ser criado
+        /// </summary>
+        /// <param name="companyId">ID</param>
+        /// <param name="name">Nome da Company</param>
+        public CreateCompanyCommand(Guid companyId, string name)
+        {
+            this.CompanyId = companyId;
+            this.Name = name;
+            this.CreatedOn = DateTime.Now;
+            this.CompanyStatus = ECompanyStatus.Active;
+        }
+        #endregion
+
+
         #region Properties
         /// <summary>
         /// Company ID
@@ -34,28 +52,7 @@ namespace Esperanto.Domain.Entities
         /// </summary>
         public ECompanyStatus CompanyStatus { get; set; }
 
-        /// <summary>
-        /// Company Log ID
-        /// </summary>
-        public Guid CompanyLogId { get; set; }
-
-        /// <summary>
-        /// CompanyLog
-        /// </summary>
-        public List<CompanyLog> CompanyLogs { get; set; }
-
-        /// <summary>
-        /// Project  ID
-        /// </summary>
-        public Guid ProjectId { get; set; }
-
-        /// <summary>
-        /// Projects
-        /// </summary>
-        public List<Project> Projects { get; set; }
-
 
         #endregion
-
     }
 }

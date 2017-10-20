@@ -35,7 +35,17 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\User\CreateUserCommand.cs" />
+    <Compile Include="Commands\CompanyCommands\CreateCompanyCommand.cs" />
+    <Compile Include="Commands\CompanyCommands\DeleteCompanyCommand.cs" />
+    <Compile Include="Commands\CompanyCommands\UpdateCompanyCommand.cs" />
+    <Compile Include="Commands\CompanyLog\CreateCompanyLogCommand.cs" />
+    <Compile Include="Commands\ProjectCommands\CreateProjectCommand.cs" />
+    <Compile Include="Commands\ProjectCommands\DeleteProjectCommand.cs" />
+    <Compile Include="Commands\ProjectCommands\UpdateProjectCommand.cs" />
+    <Compile Include="Commands\ProjectLogCommands\CreateProjectLogCommand.cs" />
+    <Compile Include="Commands\UserCommands\CreateUserCommand.cs" />
+    <Compile Include="Commands\UserCommands\DeleteUserCommand.cs" />
+    <Compile Include="Commands\UserCommands\UpdateUserCommand.cs" />
     <Compile Include="Entities\Company.cs" />
     <Compile Include="Entities\CompanyLog.cs" />
     <Compile Include="Entities\Project.cs" />
@@ -63,9 +73,6 @@
     <Compile Include="Repositories\IUserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Commands\Company\" />
-    <Folder Include="Commands\ProjectLog\" />
-    <Folder Include="Commands\Project\" />
     <Folder Include="Scopes\" />
     <Folder Include="Services\" />
     <Folder Include="Specs\" />

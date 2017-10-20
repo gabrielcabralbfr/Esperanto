@@ -1,12 +1,33 @@
-﻿using Esperanto.Domain.Enums.Project;
-using System;
-using System.Collections.Generic;
+﻿using System;
+using Esperanto.Domain.Enums.Project;
 
-
-namespace Esperanto.Domain.Entities
+namespace Esperanto.Domain.Commands.ProjectCommands
 {
-    public class Project
+    public class UpdateProjectCommand
     {
+
+
+        #region Constructor
+
+        public UpdateProjectCommand(Guid projectId, string name, Guid licenseId, Guid permissionId, string description, EFileType fileType, char divisorChar, string fileName, string errorEmail, ESendType sendType, bool ignoreFirstLine)
+        {
+            ProjectId = projectId;
+            Name = name;
+            LicenseId = licenseId;
+            PermissionId = permissionId;
+            Description = description;
+            FileType = fileType;
+            DivisorChar = divisorChar;
+            FileName = fileName;
+            ErrorEmail = errorEmail;
+            SendType = sendType;
+            IgnoreFirstLine = ignoreFirstLine;
+            ProjectStatus = EProjectStatus.Active;
+        }
+
+        #endregion
+
+
 
         #region Properties
 
@@ -70,47 +91,7 @@ namespace Esperanto.Domain.Entities
         /// </summary>
         public EProjectStatus ProjectStatus { get; set; }
 
-        /// <summary>
-        /// FK da empresa desse projeto
-        /// </summary>
-        public Guid CompanyId { get; set; }
 
-        /// <summary>
-        /// Empresa desse projeto
-        /// </summary>
-        public Company Company { get; set; }
-
-        /// <summary>
-        /// FK da integração do projeto
-        /// </summary>
-        public Guid ProjectIntegrationId { get; set; }
-
-        /// <summary>
-        /// Integração do projeto
-        /// </summary>
-        public ProjectIntegration ProjectIntegration { get; set; }
-
-
-        /// <summary>
-        /// FK - ID do Log do Projeto
-        /// </summary>
-        public Guid ProjectLogId { get; set; }
-
-        /// <summary>
-        /// Project Logs do projeto
-        /// </summary>
-        public List<ProjectLog> ProjectLogs { get; set; }
-
-        /// <summary>
-        /// FK - Project Field ID
-        /// </summary>
-        public Guid ProjectFieldId { get; set; }
-
-        /// <summary>
-        /// Lista de Project Fields do Projeto
-        /// </summary>
-        public List<ProjectField> ProjectFields { get; set; }
         #endregion
-
     }
 }
