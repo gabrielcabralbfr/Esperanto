@@ -38,13 +38,14 @@
     <Compile Include="Commands\CompanyCommands\CreateCompanyCommand.cs" />
     <Compile Include="Commands\CompanyCommands\DeleteCompanyCommand.cs" />
     <Compile Include="Commands\CompanyCommands\UpdateCompanyCommand.cs" />
-    <Compile Include="Commands\CompanyLog\CreateCompanyLogCommand.cs" />
+    <Compile Include="Commands\CompanyLogCommands\CreateCompanyLogCommand.cs" />
     <Compile Include="Commands\ProjectCommands\CreateProjectCommand.cs" />
     <Compile Include="Commands\ProjectCommands\DeleteProjectCommand.cs" />
     <Compile Include="Commands\ProjectCommands\UpdateProjectCommand.cs" />
     <Compile Include="Commands\ProjectFieldCommands\CreateProjectFieldCommand.cs" />
     <Compile Include="Commands\ProjectIntegrationCommands\CreateProjectIntegrationCommand.cs" />
     <Compile Include="Commands\ProjectLogCommands\CreateProjectLogCommand.cs" />
+    <Compile Include="Commands\UserCommands\AuthenticateUserCommand.cs" />
     <Compile Include="Commands\UserCommands\CreateUserCommand.cs" />
     <Compile Include="Commands\UserCommands\DeleteUserCommand.cs" />
     <Compile Include="Commands\UserCommands\UpdateUserCommand.cs" />
@@ -74,10 +75,17 @@
     <Compile Include="Repositories\IProjectRepository.cs" />
     <Compile Include="Repositories\IUserLogRepository.cs" />
     <Compile Include="Repositories\IUserRepository.cs" />
+    <Compile Include="Services\ICompanyAppService.cs" />
+    <Compile Include="Services\ICompanyLogAppService.cs" />
+    <Compile Include="Services\IProjectAppService.cs" />
+    <Compile Include="Services\IProjectFieldAppService.cs" />
+    <Compile Include="Services\IProjectIntegrationAppService.cs" />
+    <Compile Include="Services\IProjectLogAppService.cs" />
+    <Compile Include="Services\IUserAppService.cs" />
+    <Compile Include="Services\IUserLogAppService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Scopes\" />
-    <Folder Include="Services\" />
     <Folder Include="Specs\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

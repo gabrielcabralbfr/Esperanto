@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace Esperanto.Domain.Commands.CompanyLog
+namespace Esperanto.Domain.Commands.CompanyLogCommands
 {
     public class CreateCompanyLogCommand
     {

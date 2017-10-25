@@ -15,12 +15,14 @@ namespace Esperanto.Domain.Commands.UserCommands
         /// <summary>
         ///  Construtor que recebe os atributos do Objeto User a ser criado
         /// </summary>
+        /// <param name="userId">ID do usuário</param>
         /// <param name="email">E-mail do usuário</param>
         /// <param name="password">Senha do usuário</param>
         /// <param name="name">Nome do usuário</param>
         /// <param name="userRole">Perfil do usuário</param>
-        public CreateUserCommand(string email, string password, string name, EUserRole userRole)
+        public CreateUserCommand(Guid userId, string email, string password, string name, EUserRole userRole)
         {
+            this.UserId = userId;
             this.Email = email;
             this.Password = password;
             this.Name = name;
@@ -32,6 +34,11 @@ namespace Esperanto.Domain.Commands.UserCommands
         #endregion
 
         #region Properties
+
+        /// <summary>
+        /// Id do usuário
+        /// </summary>
+        public Guid UserId { get; set; }
 
         /// <summary>
         /// Nome do usuário

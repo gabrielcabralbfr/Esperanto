@@ -3,7 +3,7 @@
 
 namespace Esperanto.Domain.Commands.ProjectCommands
 {
-    class DeleteProjectCommand
+    public class DeleteProjectCommand
     {
         #region Constructor
 
