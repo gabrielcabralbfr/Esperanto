@@ -18,7 +18,9 @@ namespace Esperanto.Domain.Commands.CompanyLog
             this.Description = description;
             this.CreatedOn = DateTime.Now;
         }
+
         #endregion
+
 
         #region Properties
 
