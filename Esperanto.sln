@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.15
+VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{E77FF0E3-67F8-4EF7-913B-BFBBB1B8630E}"
 EndProject
@@ -19,9 +19,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - Crosscutting", "4.2 -
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Esperanto.Domain", "src\Esperanto.Domain\Esperanto.Domain.csproj", "{BE39260F-2376-4C38-840E-31A86B6BA3AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTL.WebStore.SharedKernel", "..\..\GTL.WebStore\src\GTL.WebStore.SharedKernel\GTL.WebStore.SharedKernel.csproj", "{23189BA2-2DC3-4CCD-9ACA-BA3E0084A969}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Esperanto.Infrastructure", "src\Esperanto.Infrastructure\Esperanto.Infrastructure\Esperanto.Infrastructure.csproj", "{345BFA9F-BCB1-408E-9510-0B2BAFB1B1F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTL.WebStore.SharedKernel", "src\GTL.WebStore.SharedKernel\GTL.WebStore.SharedKernel.csproj", "{23189BA2-2DC3-4CCD-9ACA-BA3E0084A969}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,14 +33,14 @@ Global
 		{BE39260F-2376-4C38-840E-31A86B6BA3AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE39260F-2376-4C38-840E-31A86B6BA3AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE39260F-2376-4C38-840E-31A86B6BA3AB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{23189BA2-2DC3-4CCD-9ACA-BA3E0084A969}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{23189BA2-2DC3-4CCD-9ACA-BA3E0084A969}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{23189BA2-2DC3-4CCD-9ACA-BA3E0084A969}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{23189BA2-2DC3-4CCD-9ACA-BA3E0084A969}.Release|Any CPU.Build.0 = Release|Any CPU
 		{345BFA9F-BCB1-408E-9510-0B2BAFB1B1F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{345BFA9F-BCB1-408E-9510-0B2BAFB1B1F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{345BFA9F-BCB1-408E-9510-0B2BAFB1B1F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{345BFA9F-BCB1-408E-9510-0B2BAFB1B1F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23189BA2-2DC3-4CCD-9ACA-BA3E0084A969}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23189BA2-2DC3-4CCD-9ACA-BA3E0084A969}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23189BA2-2DC3-4CCD-9ACA-BA3E0084A969}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23189BA2-2DC3-4CCD-9ACA-BA3E0084A969}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,8 +49,8 @@ Global
 		{CE8A6792-E4B0-4B39-8126-E0E852B3AD52} = {E35BC104-8224-40E9-9739-C0D317F0BA51}
 		{93933419-3016-43D6-8D70-832082F351FD} = {E35BC104-8224-40E9-9739-C0D317F0BA51}
 		{BE39260F-2376-4C38-840E-31A86B6BA3AB} = {CF8DE652-0AEC-42BD-9461-BE5F6E2AAFC6}
-		{23189BA2-2DC3-4CCD-9ACA-BA3E0084A969} = {CF8DE652-0AEC-42BD-9461-BE5F6E2AAFC6}
 		{345BFA9F-BCB1-408E-9510-0B2BAFB1B1F9} = {CE8A6792-E4B0-4B39-8126-E0E852B3AD52}
+		{23189BA2-2DC3-4CCD-9ACA-BA3E0084A969} = {CF8DE652-0AEC-42BD-9461-BE5F6E2AAFC6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {44804AC8-D55D-441D-915A-04B258781AEE}

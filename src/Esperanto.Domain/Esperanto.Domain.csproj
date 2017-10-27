@@ -88,11 +88,5 @@
   <ItemGroup>
     <Folder Include="Scopes\" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\GTL.WebStore\src\GTL.WebStore.SharedKernel\GTL.WebStore.SharedKernel.csproj">
-      <Project>{23189BA2-2DC3-4CCD-9ACA-BA3E0084A969}</Project>
-      <Name>GTL.WebStore.SharedKernel</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
