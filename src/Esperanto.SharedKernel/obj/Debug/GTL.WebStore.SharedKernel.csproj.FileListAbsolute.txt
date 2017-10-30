@@ -1,0 +1,6 @@
+D:\Trabalhos\Aulas\Asp.Net\WebStore\GTL.WebStore\src\GTL.WebStore.SharedKernel\obj\Debug\GTL.WebStore.SharedKernel.csprojResolveAssemblyReference.cache
+D:\Trabalhos\Aulas\Asp.Net\WebStore\GTL.WebStore\src\GTL.WebStore.SharedKernel\obj\Debug\GTL.WebStore.SharedKernel.csproj.CoreCompileInputs.cache
+D:\Trabalhos\Aulas\Asp.Net\WebStore\GTL.WebStore\src\GTL.WebStore.SharedKernel\bin\Debug\GTL.WebStore.SharedKernel.dll
+D:\Trabalhos\Aulas\Asp.Net\WebStore\GTL.WebStore\src\GTL.WebStore.SharedKernel\bin\Debug\GTL.WebStore.SharedKernel.pdb
+D:\Trabalhos\Aulas\Asp.Net\WebStore\GTL.WebStore\src\GTL.WebStore.SharedKernel\obj\Debug\GTL.WebStore.SharedKernel.dll
+D:\Trabalhos\Aulas\Asp.Net\WebStore\GTL.WebStore\src\GTL.WebStore.SharedKernel\obj\Debug\GTL.WebStore.SharedKernel.pdb

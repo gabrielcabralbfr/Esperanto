@@ -1,5 +1,5 @@
 ﻿using Esperanto.Domain.Entities;
-using GTL.WebStore.SharedKernel.Helpers;
+using Esperanto.SharedKernel.Helpers;
 using System;
 using System.Linq;
 using System.Linq.Expressions;
