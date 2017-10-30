@@ -1,4 +1,5 @@
-﻿using Esperanto.Infrastructure.Map;
+﻿using Esperanto.Domain.Entities;
+using Esperanto.Infrastructure.Map;
 using System;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
