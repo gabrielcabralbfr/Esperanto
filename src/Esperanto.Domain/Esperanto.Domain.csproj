@@ -83,6 +83,10 @@
     <Compile Include="Services\IProjectLogAppService.cs" />
     <Compile Include="Services\IUserAppService.cs" />
     <Compile Include="Services\IUserLogAppService.cs" />
+    <Compile Include="Specs\CompanyLogSpecs.cs" />
+    <Compile Include="Specs\CompanySpecs.cs" />
+    <Compile Include="Specs\ProjectLogSpecs.cs" />
+    <Compile Include="Specs\ProjectSpecs.cs" />
     <Compile Include="Specs\UserLogSpecs.cs" />
     <Compile Include="Specs\UserSpecs.cs" />
   </ItemGroup>

@@ -1,4 +1,5 @@
 ﻿using Esperanto.Domain.Entities;
+using Esperanto.Domain.Enums.User;
 using Esperanto.SharedKernel.Helpers;
 using System;
 using System.Linq.Expressions;
@@ -58,5 +59,55 @@ namespace Esperanto.Domain.Specs
             return u => u.CreatedOn;
         }
 
+
+        /// <summary>
+        /// Método para obter usuários ativos
+        /// </summary>
+        /// <returns>retorna usuários ativos</returns>
+        public static Expression<Func<User, bool>> GetActives()
+        {
+            return u => u.UserStatus.Equals(EUserStatus.Active);
+        }
+
+
+        /// <summary>
+        /// Método para obter usuários inativos
+        /// </summary>
+        /// <returns>retorna usuários inativos</returns>
+        public static Expression<Func<User, bool>> GetInactives()
+        {
+            return u => u.UserStatus.Equals(EUserStatus.Inactive);
+        }
+
+
+        /// <summary>
+        /// Método para obter usuários com Role = ADMIN
+        /// </summary>
+        /// <returns>retorna usuários com Role = ADMIN</returns>
+        public static Expression<Func<User, bool>> GetAdmins()
+        {
+            return u => u.UserRole.Equals(EUserRole.Admin);
+
+        }
+
+        /// <summary>
+        /// Método para obter usuários com Role = COLLABORATOR
+        /// </summary>
+        /// <returns>retorna usuários com Role = COLLABORATOR</returns>
+        public static Expression<Func<User, bool>> GetCollaborators()
+        {
+            return u => u.UserRole.Equals(EUserRole.Collaborator);
+
+        }
+
+        /// <summary>
+        /// Método para obter usuários com Role = CLIENT
+        /// </summary>
+        /// <returns>retorna usuários com Role = CLIENT</returns>
+        public static Expression<Func<User, bool>> GetClients()
+        {
+            return u => u.UserRole.Equals(EUserRole.Client);
+
+        }
     }
 }

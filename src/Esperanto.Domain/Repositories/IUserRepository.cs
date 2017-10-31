@@ -15,19 +15,13 @@ namespace Esperanto.Domain.Repositories
 
 
         /// <summary>
-        /// Método para trazer os usuários
+        /// Método para obter uma Lista de Users ignorando a quantidade informada no parâmetro skip
+        /// e selecionando a quantidade informada no parâmetro take
         /// </summary>
         /// <param name="skip">Quantidade de usuários que serão desconsiderados</param>
         /// <param name="take">Quantidade de usuários que serão considerados</param>
         /// <returns>Retorna List<User> - Quantidade de usuários informada, excluindo quantos usuários foram informados</returns>
         List<User> Get(int skip, int take);
-
-        /// <summary>
-        /// Método para buscar os Projects aos quais o Usuário tem acesso
-        /// </summary>
-        /// <param name="user"></param>
-        /// <returns>Retorna List<Project> que o usuário pode acessar </returns>
-        List<Project> GetProjects(User user);
 
         /// <summary>
         /// Método para buscar usuário pelo ID
@@ -59,19 +53,19 @@ namespace Esperanto.Domain.Repositories
         /// Método para buscar todos os usuários com ROLE = Admin
         /// </summary>
         /// <returns>Retorna Lista de usuários com Role = Admin</returns>
-        List<User> GetAdminUsers();
+        List<User> GetAdmins();
 
         /// <summary>
         /// Método para buscar todos os usuários com ROLE = Collaborator
         /// </summary>
         /// <returns>Retorna Lista de usuários com Role = Collaborator</returns>
-        List<User> GetCollaboratorUsers();
+        List<User> GetCollaborators();
 
         /// <summary>
         /// Método para buscar todos os usuários com ROLE = Client
         /// </summary>
         /// <returns>Retorna Lista de usuários com Role = Client</returns>
-        List<User> GetClientUsers();
+        List<User> GetClients();
 
         /// <summary>
         /// Método para criar o usuário

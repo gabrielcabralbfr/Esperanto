@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Esperanto.Domain.Entities;
 using Esperanto.Infrastructure.Context;
+using Esperanto.Domain.Specs;
 
 namespace Esperanto.Infrastructure.Repositories
 {
@@ -36,74 +37,150 @@ namespace Esperanto.Infrastructure.Repositories
 
         #region Methods
 
+        /// <summary>
+        /// Implementação do método para autenticar o usuário
+        /// </summary>
+        /// <param name="email">e-mail do usuário a ser autenticado</param>
+        /// <param name="password">senha do usuário a ser autenticado</param>
+        /// <returns></returns>
         public User Authenticate(string email, string password)
         {
-            
+            return _context.Users
+                           .FirstOrDefault(UserSpecs.AuthenticateUser(email, password));
         }
 
+        /// <summary>
+        /// Método para criar um usuário no contexto
+        /// </summary>
+        /// <param name="user">usuário a ser autenticado</param>
         public void Create(User user)
         {
-            throw new NotImplementedException();
+            _context.Users.Add(user);
         }
 
-        public void Delete(User user)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<User> Get()
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<User> Get(int skip, int take)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<User> GetActives()
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<User> GetAdminUsers()
-        {
-            throw new NotImplementedException();
-        }
-
-        public User GetByEmail(string email)
-        {
-            throw new NotImplementedException();
-        }
-
-        public User GetById(Guid userID)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<User> GetClientUsers()
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<User> GetCollaboratorUsers()
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<User> GetInactives()
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Project> GetProjects(User user)
-        {
-            throw new NotImplementedException();
-        }
-
+        /// <summary>
+        /// Método para atualizar um usuário
+        /// </summary>
+        /// <param name="user">Usuário a ser atualizado</param>
         public void Update(User user)
         {
-            throw new NotImplementedException();
+            _context.Entry(user).State = System.Data.Entity.EntityState.Modified;
+        }
+
+
+        /// <summary>
+        /// Método para remover um usuário do contexto
+        /// </summary>
+        /// <param name="user">usuário a ser removido</param>
+        public void Delete(User user)
+        {
+            _context.Users.Remove(user);
+        }
+
+        /// <summary>
+        /// Método para obter todos os usuários
+        /// </summary>
+        /// <returns>retorna todos os usuários</returns>
+        public List<User> Get()
+        {
+            return _context.Users
+                           .ToList();
+        }
+        /// <summary>
+        /// Método para obter uma Lista de Users ignorando a quantidade informada no parâmetro skip
+        /// e selecionando a quantidade informada no parâmetro take
+        /// </summary>
+        /// <param name="skip">Quantidade de usuários que serão desconsiderados</param>
+        /// <param name="take">Quantidade de usuários que serão considerados</param>
+        /// <returns>Retorna List<User> - Quantidade de usuários informada, excluindo quantos usuários foram informados</returns>
+        public List<User> Get(int skip, int take)
+        {
+            return _context.Users
+                           .OrderBy(UserSpecs.OrderByDefault())
+                           .Skip(skip)
+                           .Take(take)
+                           .ToList();
+        }
+
+        /// <summary>
+        /// Método para obter usuários ativos
+        /// </summary>
+        /// <returns>retorna apenas usuários ativos</returns>
+        public List<User> GetActives()
+        {
+            return _context.Users
+                           .Where(UserSpecs.GetActives())
+                           .OrderBy(UserSpecs.OrderByDefault())           
+                           .ToList();
+        }
+
+        /// <summary>
+        /// Método para obter usuários inativos
+        /// </summary>
+        /// <returns></returns>
+        public List<User> GetInactives()
+        {
+            return _context.Users
+                           .Where(UserSpecs.GetInactives())
+                           .OrderBy(UserSpecs.OrderByDefault())
+                           .ToList();
+        }
+
+        /// <summary>
+        /// Método para buscar todos os usuários com ROLE = Admin
+        /// </summary>
+        /// <returns>Retorna Lista de usuários com Role = Admin</returns>
+        public List<User> GetAdmins()
+        {
+            return _context.Users
+                           .Where(UserSpecs.GetAdmins())
+                           .OrderBy(UserSpecs.OrderByDefault())
+                           .ToList();
+        }
+
+        /// <summary>
+        /// Método para buscar todos os usuários com ROLE = Client
+        /// </summary>
+        /// <returns>Retorna Lista de usuários com Role = Client</returns>
+        public List<User> GetClients()
+        {
+            return _context.Users
+                           .Where(UserSpecs.GetClients())
+                           .OrderBy(UserSpecs.OrderByDefault())
+                           .ToList();
+        }
+
+        /// <summary>
+        /// Método para buscar todos os usuários com ROLE = Collaborator
+        /// </summary>
+        /// <returns>Retorna Lista de usuários com Role = Collaborator</returns>
+        public List<User> GetCollaborators()
+        {
+            return _context.Users
+                           .Where(UserSpecs.GetCollaborators())
+                           .OrderBy(UserSpecs.OrderByDefault())
+                           .ToList();
+        }
+
+        /// <summary>
+        /// Método para buscar usuário pelo email
+        /// </summary>
+        /// <param name="email">email do usuário a ser buscado</param>
+        /// <returns>Retorna um User que possui o email informado</returns>
+        public User GetByEmail(string email)
+        {
+            return _context.Users.FirstOrDefault(UserSpecs.GetByEmail(email));
+        }
+
+
+        /// <summary>
+        /// Método para buscar usuário pelo ID
+        /// </summary>
+        /// <param name="userID">ID do usuário a ser buscado</param>
+        /// <returns>Retorna um User que possui o ID informado</returns>
+        public User GetById(Guid userID)
+        {
+            return _context.Users.FirstOrDefault(UserSpecs.GetById(userID));
         }
 
         #endregion

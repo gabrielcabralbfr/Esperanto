@@ -40,18 +40,10 @@ namespace Esperanto.Domain.Repositories
         List<ProjectLog> Get(int skip, int take);
 
         /// <summary>
-        /// Método para retornar ProjectLog de um período específico
-        /// </summary>
-        /// <param name="startDate">Data de início</param>
-        /// <param name="endDate">Data final</param>
-        /// <returns>Retorna List<ProjectLog> com data de criação entre as datas passadas como parâmetro</returns>
-        List<ProjectLog> Get(DateTime startDate, DateTime endDate);
-
-        /// <summary>
         /// Método para buscar ProjectLog por ID
         /// </summary>
         /// <param name="projectLogId">ID do ProjectLog a ser buscado</param>
         /// <returns>Retorna o ProjectLog com o ID informado</returns>
-        ProjectLog GetById(string projectLogId);
+        ProjectLog GetById(Guid projectLogId);
     }
 }

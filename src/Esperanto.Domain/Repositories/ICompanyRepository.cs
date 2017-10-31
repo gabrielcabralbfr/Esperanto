@@ -46,13 +46,25 @@ namespace Esperanto.Domain.Repositories
         /// </summary>
         /// <param name="companyId">ID da Company a ser buscada</param>
         /// <returns>Retorna a Company com o ID informado</returns>
-        Company Get(string companyId);
+        Company Get(Guid companyId);
 
         /// <summary>
-        /// Método para buscar projetos de uma determinada Company
+        /// Método para buscar uma Company pelo nome
         /// </summary>
-        /// <param name="company">Company a qual deseja-se obter os projetos</param>
-        /// <returns>Retorna Lista de Projects da Company passada no parâmetro</returns>
-        List<Company> GetProjects(Company company);
+        /// <param name="name">Nome da Company a ser buscada</param>
+        /// <returns>Retorna uma Company caso exista com o nome informado</returns>
+        Company GetByName(string name);
+
+        /// <summary>
+        /// Método para buscar todas as Company ativas
+        /// </summary>
+        /// <returns>Retorna uma lista de Company com status = ativo</returns>
+        List<Company> GetActive();
+
+        /// <summary>
+        /// Método para buscar todas as Company inativas
+        /// </summary>
+        /// <returns>Retorna uma lista de Company com status = inativo</returns>
+        List<Company> GetInactive();
     }
 }

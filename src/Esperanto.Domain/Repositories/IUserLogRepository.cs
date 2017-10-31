@@ -46,13 +46,5 @@ namespace Esperanto.Domain.Repositories
         /// <returns>Retorna List<UserLog> com data de criação entre as datas passadas como parâmetro</returns>
         List<UserLog> Get(DateTime startDate, DateTime endDate);
         
-        /// <summary>
-        /// Método para buscar UserLog por ID
-        /// </summary>
-        /// <param name="userLogId">ID do UserLog a ser buscado</param>
-        /// <returns>Retorna o UserLog com o ID informado</returns>
-        Project GetById(string userLogId);
-
-        
     }
 }
