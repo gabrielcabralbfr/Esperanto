@@ -80,6 +80,7 @@ namespace Esperanto.Infrastructure.Context
             modelBuilder.Configurations.Add(new UserCompanyMap());
             modelBuilder.Configurations.Add(new UserLogMap());
             modelBuilder.Configurations.Add(new UserMap());
+            modelBuilder.Configurations.Add(new ProjectFieldMap());
 
         }
 

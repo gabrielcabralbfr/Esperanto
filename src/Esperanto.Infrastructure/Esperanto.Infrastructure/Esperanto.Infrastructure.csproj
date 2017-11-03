@@ -46,6 +46,7 @@
     <Compile Include="Context\StoreDataContext.cs" />
     <Compile Include="Map\CompanyLogMap.cs" />
     <Compile Include="Map\CompanyMap.cs" />
+    <Compile Include="Map\ProjectFieldMap.cs" />
     <Compile Include="Map\ProjectIntegrationMap.cs" />
     <Compile Include="Map\ProjectLogMap.cs" />
     <Compile Include="Map\ProjectMap.cs" />

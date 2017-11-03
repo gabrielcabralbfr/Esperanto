@@ -1,22 +1,26 @@
 ﻿using Esperanto.Domain.Entities;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
-
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Esperanto.Infrastructure.Map
 {
-    public class CompanyMap : EntityTypeConfiguration<Company>
+    public class ProjectFieldMap : EntityTypeConfiguration<ProjectField>
     {
-        public CompanyMap()
+        public ProjectFieldMap()
         {
             // Mapeando à qual tabela essa entidade pertence
-            ToTable("Company");
+            ToTable("ProjectField");
 
             // Informando chave primária
-            HasKey(c => c.CompanyId);
+            HasKey(pf => pf.ProjectFieldId);
 
             // Desabilitando geração automática
-            Property(c => c.CompanyId)
+            Property(pf => pf.ProjectFieldId)
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
 
             // Mapeando para o banco propriedade Name 
@@ -25,19 +29,10 @@ namespace Esperanto.Infrastructure.Map
                 .HasColumnType("nvarchar")
                 .IsRequired();
 
-            // Mapeando para o banco propriedade CreatedOn 
-            Property(c => c.CreatedOn)
+            // Mapeando para o banco propriedade OrderPosition 
+            Property(c => c.OrderPosition)
+                .HasColumnType("int")
                 .IsRequired();
-
-            // Mapeando para o banco propriedade ModifiedOn 
-            Property(c => c.ModifiedOn)
-                .IsRequired();
-
-            // Mapeando para o banco propriedade CompanyStatus 
-            Property(c => c.CompanyStatus)
-                .HasColumnType("nvarchar")
-                .IsRequired();
-
         }
     }
 }

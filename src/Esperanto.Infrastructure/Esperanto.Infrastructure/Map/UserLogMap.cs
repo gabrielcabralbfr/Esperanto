@@ -1,9 +1,6 @@
 ﻿using Esperanto.Domain.Entities;
-using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-
 
 namespace Esperanto.Infrastructure.Map
 {
