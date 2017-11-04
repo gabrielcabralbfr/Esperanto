@@ -12,7 +12,7 @@ namespace Esperanto.Domain.Repositories
         /// <summary>
         /// Método para criar Companies
         /// </summary>
-        /// <param name="company"></param>
+        /// <param name="company">Company a ser criada</param>
         void Create(Company company);
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace Esperanto.Domain.Repositories
         /// </summary>
         /// <param name="skip">Quantidade de Companies a ser desconsiderada</param>
         /// <param name="take">Quantidade de Companies que deseja obter</param>
-        /// <returns></returns>
+        /// <returns>Retorna uma Lista de Company</returns>
         List<Company> Get(int skip, int take);
 
         /// <summary>
@@ -46,7 +46,7 @@ namespace Esperanto.Domain.Repositories
         /// </summary>
         /// <param name="companyId">ID da Company a ser buscada</param>
         /// <returns>Retorna a Company com o ID informado</returns>
-        Company Get(Guid companyId);
+        Company GetById(Guid companyId);
 
         /// <summary>
         /// Método para buscar uma Company pelo nome
