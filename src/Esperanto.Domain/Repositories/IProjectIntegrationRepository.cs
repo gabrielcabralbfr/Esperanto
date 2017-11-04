@@ -9,7 +9,7 @@ namespace Esperanto.Domain.Repositories
         /// <summary>
         /// Método para criar ProjectIntegration
         /// </summary>
-        /// <param name="projectIntegration"></param>
+        /// <param name="projectIntegration">ProjectIntegration a ser criado</param>
         void Create(ProjectIntegration projectIntegration);
 
         /// <summary>

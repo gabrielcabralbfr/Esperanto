@@ -17,13 +17,14 @@ namespace Esperanto.Domain.Specs
         }
 
         /// <summary>
-        /// Método para buscar um ProjectLog por ID
+        /// Método para obter os Logs de Projeto por delimitação de período inicial e período final
         /// </summary>
-        /// <param name="projectLogId">ID do ProjectLog a ser buscado</param>
-        /// <returns>Retorna true caso encontre um ProjectLog com o ID informado</returns>
-        public static Expression<Func<ProjectLog, bool>> GetById(Guid projectLogId)
+        /// <param name="starDate">Período inicial</param>
+        /// <param name="endDate">Período final</param>
+        /// <returns>Retorna todos os Logs de Projeto dentro do período especificado</returns>
+        public static Expression<Func<ProjectLog, bool>> Get(DateTime startDate, DateTime endDate)
         {
-            return pl => pl.ProjectLogId.Equals(projectLogId);
+            return pl => pl.CreatedOn >= startDate && pl.CreatedOn <= endDate;
         }
     }
 }

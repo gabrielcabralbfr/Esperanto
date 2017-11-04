@@ -9,12 +9,12 @@ namespace Esperanto.Domain.Specs
     public class CompanySpecs
     {
         /// <summary>
-        /// Método para ordenar Company por data de criação
+        /// Método para ordenar Company por nome
         /// </summary>
-        /// <returns>Retorna uma Expression do tipo DateTime para ordenação por data de criação</returns>
-        public static Expression<Func<Company, DateTime>> OrderByDefault()
+        /// <returns>Retorna uma Expression do tipo string para ordenação por Nome</returns>
+        public static Expression<Func<Company, string>> OrderByDefault()
         {
-            return c => c.CreatedOn;
+            return c => c.Name;
         }
 
         /// <summary>
@@ -43,6 +43,16 @@ namespace Esperanto.Domain.Specs
         public static Expression<Func<Company, bool>> GetByName(string name)
         {
             return c => c.Name.Equals(name);
+        }
+
+        /// <summary>
+        /// Método para buscar Companies pelo ID
+        /// </summary>
+        /// <param name="companyId">ID da Company a ser buscado</param>
+        /// <returns>Retorna a Company com o ID informado</returns>
+        public static Expression<Func<Company, bool>> GetById(Guid companyId)
+        {
+            return c => c.CompanyId.Equals(companyId);
         }
     }
 }

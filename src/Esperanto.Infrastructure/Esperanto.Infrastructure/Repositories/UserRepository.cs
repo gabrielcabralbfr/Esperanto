@@ -5,6 +5,7 @@ using System.Linq;
 using Esperanto.Domain.Entities;
 using Esperanto.Infrastructure.Context;
 using Esperanto.Domain.Specs;
+using System.Data.Entity;
 
 namespace Esperanto.Infrastructure.Repositories
 {
@@ -64,7 +65,7 @@ namespace Esperanto.Infrastructure.Repositories
         /// <param name="user">Usuário a ser atualizado</param>
         public void Update(User user)
         {
-            _context.Entry(user).State = System.Data.Entity.EntityState.Modified;
+            _context.Entry(user).State = EntityState.Modified;
         }
 
 

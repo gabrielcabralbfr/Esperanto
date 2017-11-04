@@ -13,17 +13,18 @@ namespace Esperanto.Domain.Specs
         /// <returns>Retorna uma Expression para ordenação por data de criação</returns>
         public static Expression<Func<CompanyLog, DateTime>> OrderByDefault()
         {
-            return pl => pl.CreatedOn;
+            return cl => cl.CreatedOn;
         }
 
         /// <summary>
-        /// Método para buscar um ProjectLog por ID
+        /// Método para obter os Logs de Company por delimitação de período inicial e período final
         /// </summary>
-        /// <param name="companyLogId">ID do CompanyLog a ser buscado</param>
-        /// <returns>Retorna true caso encontre um CompanyLog com o ID informado</returns>
-        public static Expression<Func<CompanyLog, bool>> GetById(Guid companyLogId)
+        /// <param name="starDate">Período inicial</param>
+        /// <param name="endDate">Período final</param>
+        /// <returns>Retorna todos os Logs de Company dentro do período especificado</returns>
+        public static Expression<Func<CompanyLog, bool>> Get(DateTime startDate, DateTime endDate)
         {
-            return cl => cl.CompanyLogId.Equals(companyLogId);
+            return cl => cl.CreatedOn >= startDate && cl.CreatedOn <= endDate;
         }
     }
 }

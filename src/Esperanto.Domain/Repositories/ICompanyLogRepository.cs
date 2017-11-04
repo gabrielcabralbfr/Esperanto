@@ -10,7 +10,7 @@ namespace Esperanto.Domain.Repositories
         /// <summary>
         /// Método para criar CompanyLog
         /// </summary>
-        /// <param name="companyLog"></param>
+        /// <param name="companyLog">Log a ser criado</param>
         void Create(CompanyLog companyLog);
 
         /// <summary>
@@ -22,7 +22,7 @@ namespace Esperanto.Domain.Repositories
         /// <summary>
         /// Método para remover CompanyLog
         /// </summary>
-        /// <param name="companyLog">CompanyLog a ser atualizado</param>
+        /// <param name="companyLog">CompanyLog a ser removido</param>
         void Delete(CompanyLog companyLog);
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace Esperanto.Domain.Repositories
         /// </summary>
         /// <param name="skip">Quantidade de CompanyLogs a ser desconsiderado</param>
         /// <param name="take">Quantidade de CompanyLogs que deseja obter</param>
-        /// <returns></returns>
+        /// <returns>Retorna uma Lista de CompanyLog</returns>
         List<CompanyLog> Get(int skip, int take);
 
         /// <summary>

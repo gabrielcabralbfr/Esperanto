@@ -41,12 +41,7 @@ namespace Esperanto.Domain.Repositories
         /// <returns></returns>
         List<Project> Get(int skip, int take);
 
-        /// <summary>
-        /// Método para buscar Project por ID
-        /// </summary>
-        /// <param name="projectId">ID do Projects a ser buscado</param>
-        /// <returns>Retorna o Project com o ID informado</returns>
-        Project GetById(Guid projectId);
+
 
         /// <summary>
         /// Método para buscar todos os projetos ativos
@@ -55,7 +50,7 @@ namespace Esperanto.Domain.Repositories
         List<Project> GetActive();
 
         /// <summary>
-        /// Método para buscar todos os projetos insativos
+        /// Método para buscar todos os projetos inativos
         /// </summary>
         /// <returns>Retorna uma Lista com os Projects inativos</returns>
         List<Project> GetInactive();
@@ -79,9 +74,16 @@ namespace Esperanto.Domain.Repositories
         List<Project> GetAPISendType();
 
         /// <summary>
+        /// Método para buscar Project por ID
+        /// </summary>
+        /// <param name="projectId">ID do Projects a ser buscado</param>
+        /// <returns>Retorna o Project com o ID informado</returns>
+        Project GetById(Guid projectId);
+
+        /// <summary>
         /// Método para buscar Projects com o e-mail informado
         /// </summary>
-        /// <param name="email">email a ser buscado</param>
+        /// <param name="email">E-mail a ser buscado</param>
         /// <returns>Retorna uma lista de Project com o campo ErrorEmail informado</returns>
         List<Project> GetByErrorEmail(string email);
 
@@ -98,12 +100,5 @@ namespace Esperanto.Domain.Repositories
         /// <param name="permissionId">Código da Base Cadastral a ser buscado</param>
         /// <returns>Retorna uma lista de Projects que possuem o permissionId informado</returns>
         List<Project> GetByPermissionId(Guid permissionId);
-
-        /// <summary>
-        /// Método para buscar projetos de uma determinada Company
-        /// </summary>
-        /// <param name="company">Company a qual deseja-se obter os projetos</param>
-        /// <returns>Retorna Lista de Projects da Company passada no parâmetro</returns>
-        List<Project> GetProjectsFromCompany(Company company);
     }
 }

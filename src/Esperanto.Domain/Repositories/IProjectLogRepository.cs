@@ -7,17 +7,12 @@ namespace Esperanto.Domain.Repositories
 {
     public interface IProjectLogRepository
     {
+
         /// <summary>
         /// Método para criar ProjectLog
         /// </summary>
-        /// <param name="projectLog"></param>
+        /// <param name="projectLog">ProjectLog a ser criado</param>
         void Create(ProjectLog projectLog);
-
-        /// <summary>
-        /// Método para atualizar ProjectLog
-        /// </summary>
-        /// <param name="projectLog">ProjectLog a ser atualizado</param>
-        void Update(ProjectLog projectLog);
 
         /// <summary>
         /// Método para remover ProjectLog
@@ -40,10 +35,11 @@ namespace Esperanto.Domain.Repositories
         List<ProjectLog> Get(int skip, int take);
 
         /// <summary>
-        /// Método para buscar ProjectLog por ID
+        /// Método para Retornar UserLog de um período específico
         /// </summary>
-        /// <param name="projectLogId">ID do ProjectLog a ser buscado</param>
-        /// <returns>Retorna o ProjectLog com o ID informado</returns>
-        ProjectLog GetById(Guid projectLogId);
+        /// <param name="startDate">Data de início</param>
+        /// <param name="endDate">Data final</param>
+        /// <returns>Retorna List<UserLog> com data de criação entre as datas passadas como parâmetro</returns>
+        List<UserLog> Get(DateTime startDate, DateTime endDate);
     }
 }

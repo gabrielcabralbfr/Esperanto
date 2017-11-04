@@ -54,6 +54,13 @@
     <Compile Include="Map\UserLogMap.cs" />
     <Compile Include="Map\UserMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\CompanyLogRepository.cs" />
+    <Compile Include="Repositories\CompanyRepository.cs" />
+    <Compile Include="Repositories\ProjectFieldRepository.cs" />
+    <Compile Include="Repositories\ProjectIntegrationRepository.cs" />
+    <Compile Include="Repositories\ProjectLogRepository.cs" />
+    <Compile Include="Repositories\ProjectRepository.cs" />
+    <Compile Include="Repositories\UserLogRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>

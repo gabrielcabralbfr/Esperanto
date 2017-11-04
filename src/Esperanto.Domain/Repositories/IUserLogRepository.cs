@@ -13,12 +13,6 @@ namespace Esperanto.Domain.Repositories
         void Create(UserLog userLog);
 
         /// <summary>
-        /// Método para atualizar UserLogs
-        /// </summary>
-        /// <param name="userLog">UserLog a ser atualizado</param>
-        void Update(UserLog userLog);
-
-        /// <summary>
         /// Método para remover UserLog
         /// </summary>
         /// <param name="userLog">UserLog a ser atualizado</param>

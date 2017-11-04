@@ -1,5 +1,4 @@
 ﻿using Esperanto.Domain.Entities;
-using System;
 using System.Collections.Generic;
 
 namespace Esperanto.Domain.Repositories
@@ -9,7 +8,7 @@ namespace Esperanto.Domain.Repositories
         /// <summary>
         /// Método para criar ProjectField
         /// </summary>
-        /// <param name="projectField"></param>
+        /// <param name="projectField">ProjectField a ser criado</param>
         void Create(ProjectField projectField);
 
         /// <summary>
