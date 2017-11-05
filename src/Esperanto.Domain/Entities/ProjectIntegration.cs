@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Esperanto.Domain.Enums.ProjectIntegration;
+using System;
 
 namespace Esperanto.Domain.Entities
 {
@@ -44,9 +45,14 @@ namespace Esperanto.Domain.Entities
         public DateTime LastMigrationDate { get; set; }
 
         /// <summary>
-        /// Intervalo de migração
+        /// Intervalo de migração. Ex: A cada 1 IntervalType.
         /// </summary>
         public int MigrationInterval { get; set; }
+
+        /// <summary>
+        /// Tipo de intervalo entre as migrações. Ex: Dias, Horas, minutos
+        /// </summary>
+        public EProjectIntegrationIntervalType IntervalType { get; set; }
 
         /// <summary>
         /// ID do projeto

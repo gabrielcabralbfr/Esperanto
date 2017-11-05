@@ -60,6 +60,7 @@
     <Compile Include="Entities\UserCompany.cs" />
     <Compile Include="Entities\UserLog.cs" />
     <Compile Include="Enums\Company\ECompanyStatus.cs" />
+    <Compile Include="Enums\ProjectIntegration\EProjectIntegrationIntervalType.cs" />
     <Compile Include="Enums\ProjectLog\ELogType.cs" />
     <Compile Include="Enums\Project\EFileType.cs" />
     <Compile Include="Enums\Project\EProjectStatus.cs" />

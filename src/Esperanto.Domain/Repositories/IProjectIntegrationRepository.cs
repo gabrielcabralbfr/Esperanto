@@ -37,5 +37,19 @@ namespace Esperanto.Domain.Repositories
         /// <param name="take">Quantidade de ProjectIntegration que deseja obter</param>
         /// <returns>Retorna List de ProjectIntegration</returns>
         List<ProjectIntegration> Get(int skip, int take);
+
+        /// <summary>
+        /// Método para verificar se a Integração do Projeto deve ser executada
+        /// </summary>
+        /// <param name="projectIntegration">ProjectIntegration que a integração vai executar</param>
+        /// <returns>Retorna true caso a integração deva ser executada</returns>
+        bool CheckExecuteIntegration(ProjectIntegration projectIntegration);
+
+        /// <summary>
+        /// Método para executar a Integração do Projeto
+        /// </summary>
+        /// <param name="projectIntegration">ProjectIntegration que a integração vai executar</param>
+        /// <returns>Retorna true caso a integração tenha sido executada com sucesso</returns>
+        bool ExecuteIntegration(ProjectIntegration projectIntegration);
     }
 }

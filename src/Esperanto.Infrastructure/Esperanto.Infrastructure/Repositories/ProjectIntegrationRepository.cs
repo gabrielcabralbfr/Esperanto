@@ -4,6 +4,8 @@ using System.Linq;
 using Esperanto.Domain.Entities;
 using Esperanto.Infrastructure.Context;
 using System.Data.Entity;
+using System;
+using Esperanto.Domain.Enums.ProjectIntegration;
 
 namespace Esperanto.Infrastructure.Repositories
 {
@@ -78,6 +80,69 @@ namespace Esperanto.Infrastructure.Repositories
                            .Skip(skip)
                            .Take(take)
                            .ToList();
+        }
+
+        /// <summary>
+        /// Método para verificar se a Integração do Projeto deve ser executada
+        /// </summary>
+        /// <param name="projectIntegration">ProjectIntegration que a integração vai executar</param>
+        /// <returns>Retorna true caso a integração deva ser executada</returns>
+        public bool CheckExecuteIntegration(ProjectIntegration projectIntegration)
+        {
+            // Data da próxima migração
+            DateTime NextMigration;
+
+            switch (projectIntegration.IntervalType)
+            {
+                case EProjectIntegrationIntervalType.Day:
+                    {
+                        NextMigration = projectIntegration.LastMigrationDate.AddDays(projectIntegration.MigrationInterval);
+
+                        if (DateTime.Now.Equals(NextMigration))
+                        {
+                            return true;
+                        }
+
+                        break;
+                    }
+
+                case EProjectIntegrationIntervalType.Hour:
+                    {
+                        NextMigration = projectIntegration.LastMigrationDate.AddHours(projectIntegration.MigrationInterval);
+                        if (DateTime.Now.Equals(NextMigration))
+                        {
+                            return true;
+                        }
+
+                        break;
+                    }
+
+                case EProjectIntegrationIntervalType.Minutes:
+                    {
+                        NextMigration = projectIntegration.LastMigrationDate.AddMinutes(projectIntegration.MigrationInterval);
+                        if (DateTime.Now.Equals(NextMigration))
+                        {
+                            return true;
+                        }
+
+                        break;
+                    }
+
+                default:
+                    return false;
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// Método para executar a Integração do Projeto
+        /// </summary>
+        /// <param name="projectIntegration">ProjectIntegration que a integração vai executar</param>
+        /// <returns>Retorna true caso a integração tenha sido executada com sucesso</returns>
+        public bool ExecuteIntegration(ProjectIntegration projectIntegration)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

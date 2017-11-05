@@ -24,10 +24,12 @@ namespace Esperanto.Infrastructure.Map
 
             // Mapeando para o banco propriedade Username
             Property(pi => pi.Username)
+                .HasMaxLength(50)
                 .IsRequired();
 
             // Mapeando para o banco propriedade Password
             Property(pi => pi.Password)
+                .HasMaxLength(20)
                 .IsRequired();
 
             // Mapeando para o banco propriedade DeleteFile
@@ -41,6 +43,11 @@ namespace Esperanto.Infrastructure.Map
 
             // Mapeando para o banco propriedade LastMigrationDate
             Property(pi => pi.LastMigrationDate)
+                .IsRequired();
+
+            // Mapeando para o banco propriedade IntervalType
+            Property(pi => pi.IntervalType)
+                .HasMaxLength(10)
                 .IsRequired();
 
             // Mapeando para o banco propriedade MigrationInterval
