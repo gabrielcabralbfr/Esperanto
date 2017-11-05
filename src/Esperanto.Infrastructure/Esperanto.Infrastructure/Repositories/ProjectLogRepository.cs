@@ -88,6 +88,11 @@ namespace Esperanto.Infrastructure.Repositories
                                .ToList();
         }
 
+        List<ProjectLog> IProjectLogRepository.Get(DateTime startDate, DateTime endDate)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
     }
 }

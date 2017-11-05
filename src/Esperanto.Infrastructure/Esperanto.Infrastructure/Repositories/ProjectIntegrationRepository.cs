@@ -1,5 +1,4 @@
 ﻿using Esperanto.Domain.Repositories;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Esperanto.Domain.Entities;
@@ -19,7 +18,7 @@ namespace Esperanto.Infrastructure.Repositories
 
         #region Constructor
 
-        public ProjectIntegrationRepository(StoerDataContext context)
+        public ProjectIntegrationRepository(StoreDataContext context)
         {
             this._context = context;
         }

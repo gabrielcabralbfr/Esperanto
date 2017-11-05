@@ -40,6 +40,6 @@ namespace Esperanto.Domain.Repositories
         /// <param name="startDate">Data de início</param>
         /// <param name="endDate">Data final</param>
         /// <returns>Retorna List<UserLog> com data de criação entre as datas passadas como parâmetro</returns>
-        List<UserLog> Get(DateTime startDate, DateTime endDate);
+        List<ProjectLog> Get(DateTime startDate, DateTime endDate);
     }
 }
