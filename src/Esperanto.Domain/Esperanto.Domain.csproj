@@ -76,6 +76,13 @@
     <Compile Include="Repositories\IProjectRepository.cs" />
     <Compile Include="Repositories\IUserLogRepository.cs" />
     <Compile Include="Repositories\IUserRepository.cs" />
+    <Compile Include="Scopes\CompanyLogScopes.cs" />
+    <Compile Include="Scopes\ProjectFieldScopes.cs" />
+    <Compile Include="Scopes\ProjectIntegrationScopes.cs" />
+    <Compile Include="Scopes\ProjectLogScopes.cs" />
+    <Compile Include="Scopes\ProjectScopes.cs" />
+    <Compile Include="Scopes\UserLogScopes.cs" />
+    <Compile Include="Scopes\UserScopes.cs" />
     <Compile Include="Services\ICompanyAppService.cs" />
     <Compile Include="Services\ICompanyLogAppService.cs" />
     <Compile Include="Services\IProjectAppService.cs" />
@@ -91,9 +98,7 @@
     <Compile Include="Specs\UserLogSpecs.cs" />
     <Compile Include="Specs\UserSpecs.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Scopes\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Esperanto.SharedKernel\Esperanto.SharedKernel.csproj">
       <Project>{23189BA2-2DC3-4CCD-9ACA-BA3E0084A969}</Project>

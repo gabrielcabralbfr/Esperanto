@@ -45,6 +45,11 @@ namespace Esperanto.Infrastructure.Map
                 .IsRequired()
                 .HasColumnType("nvarchar");
 
+            //Mapeando para o banco a propriedade FileName
+            Property(p => p.FileName)
+                .IsRequired()
+                .HasMaxLength(100);
+
             // Mapeando para o banco propriedade ErrorEmail 
             Property(p => p.ErrorEmail)
                 .IsRequired();

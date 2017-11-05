@@ -24,20 +24,20 @@ namespace Esperanto.Infrastructure.Map
             Property(u => u.Name)
                 .HasColumnName("Name")
                 .HasColumnType("nvarchar")
-                .HasMaxLength(100)
+                .HasMaxLength(20)
                 .IsRequired();
 
             // Mapeando para o banco propriedade Email 
             Property(u => u.Email)
                 .HasColumnName("Email")
                 .HasColumnType("nvarchar")
-                .HasMaxLength(100)
+                .HasMaxLength(60)
                 .IsRequired();
 
             // Mapeando para o banco propriedade Password
             Property(u => u.Password)
                 .HasColumnName("Password")
-                .HasMaxLength(50)
+                .HasMaxLength(32)
                 .HasColumnType("nvarchar")
                 .IsRequired();
 
