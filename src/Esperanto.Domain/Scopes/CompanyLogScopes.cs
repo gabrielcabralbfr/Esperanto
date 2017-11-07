@@ -15,7 +15,8 @@ namespace Esperanto.Domain.Scopes
             return AssertionConcern.IsSatisfiedBy
             (
                 AssertionConcern.AssertNotNull(companyLog, "O Log de Company não pode ser vazio"),
-                AssertionConcern.AssertNotEmpty(companyLog.Description, "A descrição do log não pode ser nula")
+                AssertionConcern.AssertNotEmpty(companyLog.Description, "A descrição do log não pode ser nula"),
+                AssertionConcern.AssertGuidIsNotEmpty(companyLog.CompanyLogId, "O ID do Log não pode ser vazio")
             );
         }
     }

@@ -1,4 +1,5 @@
-﻿using Esperanto.Domain.Enums.Company;
+﻿using Esperanto.Domain.Commands.CompanyCommands;
+using Esperanto.Domain.Enums.Company;
 using System;
 using System.Collections.Generic;
 
@@ -6,6 +7,29 @@ namespace Esperanto.Domain.Entities
 {
     public class Company
     {
+
+        #region Constructor
+
+        /// <summary>
+        /// Construtor padrão
+        /// </summary>
+        protected Company() {   }
+
+        /// <summary>
+        /// Construtor da classe Company
+        /// </summary>
+        /// <param name="command">Comando de criação de uma Company</param>
+        public Company(CreateCompanyCommand command)
+        {
+            this.CompanyId = command.CompanyId;
+            this.Name = command.Name;
+            this.CreatedOn = command.CreatedOn;
+            this.ModifiedOn = command.ModifiedOn;
+            this.CompanyStatus = command.CompanyStatus;
+        }
+
+        #endregion
+
         #region Properties
         /// <summary>
         /// Company ID
@@ -54,6 +78,28 @@ namespace Esperanto.Domain.Entities
         /// </summary>
         public List<Project> Projects { get; set; }
 
+
+        #endregion
+
+
+        #region Methods
+
+        /// <summary>
+        /// Método para tornar uma Company ativa
+        /// </summary>
+        public void ActivateCommpany()
+        {
+            this.CompanyStatus = ECompanyStatus.Active;
+        }
+
+
+        /// <summary>
+        /// Método para tornar uma Company inativa
+        /// </summary>
+        public void Deactivate()
+        {
+            this.CompanyStatus = ECompanyStatus.Inactive;
+        }
 
         #endregion
 
