@@ -1,0 +1,5 @@
+// TODO
+	- Implementar métodos de remoção nas entidades
+	- Implementar SendErrorEmail() em Project
+	- Implementar Scopes de Company e verificar se falta algum outro
+	- Implementar métodos na entidade Company

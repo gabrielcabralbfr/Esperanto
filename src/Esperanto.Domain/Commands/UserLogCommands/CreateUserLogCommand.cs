@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Esperanto.Domain.Enums.Logs;
+using System;
 
 
 namespace Esperanto.Domain.Commands.UserLogCommands
@@ -38,6 +39,11 @@ namespace Esperanto.Domain.Commands.UserLogCommands
         /// Descrição do Log do usuário
         /// </summary>
         public string Description { get; set; }
+
+        /// <summary>
+        /// Tipo de log gerado
+        /// </summary>
+        public ELogType LogType { get; set; }
 
         #endregion
     }

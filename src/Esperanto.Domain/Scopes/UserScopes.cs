@@ -67,7 +67,7 @@ namespace Esperanto.Domain.Scopes
         /// <param name="user">Usuário que efetuará a troca de senha</param>
         /// <param name="newPassword">Nova senha a ser armazenada</param>
         /// <returns>Retorna true caso a troca de senha seja bem sucedida</returns>
-        public static bool ChangeUserPassword(this User user, string newPassword)
+        public static bool ChangeUserPasswordIsValid(this User user, string newPassword)
         {
             return AssertionConcern.IsSatisfiedBy
             (

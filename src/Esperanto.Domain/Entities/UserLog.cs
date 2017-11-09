@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Esperanto.Domain.Enums.Logs;
+using System;
 
 namespace Esperanto.Domain.Entities
 {
@@ -7,9 +8,9 @@ namespace Esperanto.Domain.Entities
 
         #region Constructor
 
-        public UserLog(string description)
+        public UserLog()
         {
-            this.Description = description;
+           
         }
 
         #endregion
@@ -31,6 +32,11 @@ namespace Esperanto.Domain.Entities
         /// Descrição do Log do usuário
         /// </summary>
         public string Description { get; set; }
+
+        /// <summary>
+        /// Tipo de log gerado
+        /// </summary>
+        public ELogType LogType { get; set; }
 
         /// <summary>
         /// FK para entidade do Usuário

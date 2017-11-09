@@ -28,6 +28,10 @@ namespace Esperanto.Infrastructure.Map
                 .IsRequired()
                 .HasMaxLength(250);
 
+            // Mapeando para o banco propriedade LogType
+            Property(cl => cl.LogType)
+                .IsRequired();
+
             /* Relacionamentos */
             HasRequired(cl => cl.Company)
                 .WithMany(c => c.CompanyLogs);

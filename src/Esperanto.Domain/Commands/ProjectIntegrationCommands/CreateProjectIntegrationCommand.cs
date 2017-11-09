@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Esperanto.Domain.Enums.ProjectIntegration;
+using System;
 
 
 namespace Esperanto.Domain.Commands.ProjectIntegrationCommands
@@ -17,7 +18,7 @@ namespace Esperanto.Domain.Commands.ProjectIntegrationCommands
         /// <param name="password">Senha do usuário para integração</param>
         /// <param name="deleteFile">Flag (Boolean) para determinar se o arquivo será deletado</param>
         /// <param name="migrationInterval">Intervalo de migração</param>
-        public CreateProjectIntegrationCommand(Guid projectIntegrationId, string serverPath, string username, string password, bool deleteFile, int migrationInterval)
+        public CreateProjectIntegrationCommand(Guid projectIntegrationId, string serverPath, string username, string password, bool deleteFile, int migrationInterval, EProjectIntegrationIntervalType intervalType)
         {
             this.ProjectIntegrationId = projectIntegrationId;
             this.ServerPath = serverPath;
@@ -27,6 +28,7 @@ namespace Esperanto.Domain.Commands.ProjectIntegrationCommands
             this.FirstMigrationDate = DateTime.Now;
             this.LastMigrationDate = DateTime.Now;
             this.MigrationInterval = migrationInterval;
+            this.IntervalType = intervalType;
         }
 
         #endregion
@@ -74,6 +76,11 @@ namespace Esperanto.Domain.Commands.ProjectIntegrationCommands
         /// Intervalo de migração
         /// </summary>
         public int MigrationInterval { get; set; }
+
+        /// <summary>
+        /// Tipo de intervalo entre as migrações. Ex: Dias, Horas, minutos
+        /// </summary>
+        public EProjectIntegrationIntervalType IntervalType { get; private set; }
 
         #endregion
     }

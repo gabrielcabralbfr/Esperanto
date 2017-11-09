@@ -34,7 +34,7 @@ namespace Esperanto.Domain.Scopes
         /// </summary>
         /// <param name="project">Projeto a ser atualizado</param>
         /// <returns>Retorna true caso todas as validações sejam satisfeitas</returns>
-        public static bool UpdateProjectScopeIsValid(Project project)
+        public static bool UpdateProjectScopeIsValid(this Project project)
         {
             return project.CreateProjectScopeIsValid();
 

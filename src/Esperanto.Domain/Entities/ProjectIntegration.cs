@@ -1,68 +1,121 @@
-﻿using Esperanto.Domain.Enums.ProjectIntegration;
+﻿using Esperanto.Domain.Commands.ProjectIntegrationCommands;
+using Esperanto.Domain.Enums.ProjectIntegration;
+using Esperanto.Domain.Scopes;
 using System;
 
 namespace Esperanto.Domain.Entities
 {
+    /// <summary>
+    /// Entidade para a integração do Projeto
+    /// </summary>
     public class ProjectIntegration
     {
+
+        #region Constructor
+
+        /// <summary>
+        /// Construtor padrão
+        /// </summary>
+        public ProjectIntegration() { }
+
+
+        /// <summary>
+        /// Método construtor da Entidade que recebe um comando de criação
+        /// </summary>
+        /// <param name="command">Comando de criação com as propriedades da Entidade</param>
+        public ProjectIntegration(CreateProjectIntegrationCommand command)
+        {
+            ProjectIntegrationId = command.ProjectIntegrationId;
+            ServerPath = command.ServerPath;
+            Username = command.Username;
+            Password = command.Password;
+            DeleteFile = command.DeleteFile;
+            FirstMigrationDate = command.FirstMigrationDate;
+            LastMigrationDate = command.LastMigrationDate;
+            MigrationInterval = command.MigrationInterval;
+            IntervalType = command.IntervalType;
+        }
+
+        #endregion
+
 
         #region Properties
 
         /// <summary>
         /// Project Integration ID
         /// </summary>
-        public Guid ProjectIntegrationId { get; set; }
+        public Guid ProjectIntegrationId { get; private set; }
 
         /// <summary>
         /// Caminho do servidor para integração
         /// </summary>
-        public string ServerPath { get; set; }
+        public string ServerPath { get; private set; }
 
         /// <summary>
         /// Nome de usuário para a integração
         /// </summary>
-        public string Username { get; set; }
+        public string Username { get; private set; }
 
         /// <summary>
         /// Senha do usuário para integração
         /// </summary>
-        public string Password { get; set; }
+        public string Password { get; private set; }
 
         /// <summary>
         /// Caso este campo seja marcado como True, o arquivo de integração será deletado
         /// </summary>
-        public bool DeleteFile { get; set; }
+        public bool DeleteFile { get; private set; }
 
 
         /// <summary>
         /// Data da primeira integração
         /// </summary>
-        public DateTime FirstMigrationDate { get; set; }
+        public DateTime FirstMigrationDate { get; private set; }
 
         /// <summary>
         /// Data da última integração
         /// </summary>
-        public DateTime LastMigrationDate { get; set; }
+        public DateTime LastMigrationDate { get; private set; }
 
         /// <summary>
         /// Intervalo de migração. Ex: A cada 1 IntervalType.
         /// </summary>
-        public int MigrationInterval { get; set; }
+        public int MigrationInterval { get; private set; }
 
         /// <summary>
         /// Tipo de intervalo entre as migrações. Ex: Dias, Horas, minutos
         /// </summary>
-        public EProjectIntegrationIntervalType IntervalType { get; set; }
+        public EProjectIntegrationIntervalType IntervalType { get; private set; }
 
         /// <summary>
         /// ID do projeto
         /// </summary>
-        public Guid ProjectId { get; set; }
+        public Guid ProjectId { get; private set; }
 
         /// <summary>
         /// Projeto
         /// </summary>
-        public Project Project { get; set; }
+        public Project Project { get; private set; }
+        #endregion
+
+
+        #region Methods
+
+        /// <summary>
+        /// Método de criação de uma integração do projeto
+        /// </summary>
+        /// <param name="projectIntegration">Integração a ser criada</param>
+        public bool CreateProjectIntegration(ProjectIntegration projectIntegration)
+        {
+            if (this.CreateProjectIntegrationScopeIsValid())
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+
         #endregion
 
     }

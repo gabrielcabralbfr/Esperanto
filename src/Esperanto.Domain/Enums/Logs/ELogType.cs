@@ -1,5 +1,5 @@
 ﻿
-namespace Esperanto.Domain.Enums.ProjectLog
+namespace Esperanto.Domain.Enums.Logs
 {
     public enum ELogType
     {

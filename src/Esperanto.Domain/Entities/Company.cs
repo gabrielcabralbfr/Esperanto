@@ -5,6 +5,9 @@ using System.Collections.Generic;
 
 namespace Esperanto.Domain.Entities
 {
+    /// <summary>
+    /// Entidade Company
+    /// </summary>
     public class Company
     {
 
@@ -34,49 +37,49 @@ namespace Esperanto.Domain.Entities
         /// <summary>
         /// Company ID
         /// </summary>
-        public Guid CompanyId { get; set; }
+        public Guid CompanyId { get; private set; }
 
         /// <summary>
         /// Nome da empresa
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; private set; }
 
         /// <summary>
         /// Data de criação da empresa no sistema
         /// </summary>
-        public DateTime CreatedOn { get; set; }
+        public DateTime CreatedOn { get; private set; }
 
 
         /// <summary>
         /// Data de modificação da empresa no sistema
         /// </summary>
-        public DateTime ModifiedOn { get; set; }
+        public DateTime ModifiedOn { get; private set; }
 
 
         /// <summary>
         /// Status da empresa
         /// </summary>
-        public ECompanyStatus CompanyStatus { get; set; }
+        public ECompanyStatus CompanyStatus { get; private set; }
 
         /// <summary>
         /// Company Log ID
         /// </summary>
-        public Guid CompanyLogId { get; set; }
+        public Guid CompanyLogId { get; private set; }
 
         /// <summary>
         /// CompanyLog
         /// </summary>
-        public List<CompanyLog> CompanyLogs { get; set; }
+        public List<CompanyLog> CompanyLogs { get; private set; }
 
         /// <summary>
         /// Project  ID
         /// </summary>
-        public Guid ProjectId { get; set; }
+        public Guid ProjectId { get; private set; }
 
         /// <summary>
         /// Projects
         /// </summary>
-        public List<Project> Projects { get; set; }
+        public List<Project> Projects { get; private set; }
 
 
         #endregion
@@ -100,6 +103,30 @@ namespace Esperanto.Domain.Entities
         {
             this.CompanyStatus = ECompanyStatus.Inactive;
         }
+
+        public bool CreateCompany(Company company)
+        {
+            return false; //Not Implemented yet
+        }
+
+        /// <summary>
+        /// Método para obter todos os projetos da Empresa
+        /// </summary>
+        /// <returns>Retorna uma lista de Projects que pertence à uma Company</returns>
+        public List<Project> GetProjectsFromCompany()
+        {
+            return this.Projects;
+        }
+
+        /// <summary>
+        /// Método para obter todos os Logs de uma Company
+        /// </summary>
+        /// <returns>Retorna uma lista de CompanyLog que pertence à uma Company</returns>
+        public List<CompanyLog> GetLogsFromCompany()
+        {
+            return this.CompanyLogs;
+        }
+
 
         #endregion
 

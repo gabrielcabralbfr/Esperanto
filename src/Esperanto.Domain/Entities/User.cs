@@ -1,4 +1,5 @@
 ﻿using Esperanto.Domain.Enums.User;
+using Esperanto.Domain.Scopes;
 using System;
 using System.Collections.Generic;
 
@@ -76,6 +77,81 @@ namespace Esperanto.Domain.Entities
         /// UserLogs
         /// </summary>
         public List<UserLog> UserLogs { get; set; }
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Método para autenticar o usuário
+        /// </summary>
+        /// <param name="email">E-email a ser autenticado</param>
+        /// <param name="password">Senha do usuário a ser autenticado</param>
+        /// <returns>Retorna true caso o usuário seja autenticado</returns>
+        public bool AuthenticateUser(string email, string password)
+        {
+            if (this.AuthenticateUserScopeIsValid(email, password))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// Método para Criação do usuário
+        /// </summary>
+        /// <param name="user">Usuário a ser criado</param>
+        /// <returns>Retorna true caso o escopo de criação do usuário seja válido</returns>
+        public bool CreateUser(User user)
+        {
+            if (this.CreateUserScopeIsValid())
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        ///  Método para tornar um Usuário ativo
+        /// </summary>
+        public void ActivateUser()
+        {
+            this.UserStatus = EUserStatus.Active;
+        }
+
+
+        /// <summary>
+        ///  Método para tornar um Usuário inativo
+        /// </summary>
+        public void DeactivateUser()
+        {
+            this.UserStatus = EUserStatus.Inactive;
+        }
+
+        /// <summary>
+        /// Método para realizar a troca de senha do usuário
+        /// </summary>
+        /// <param name="newPassword">Nova senha</param>
+        /// <returns>Retorna true caso as validações de troca de senha sejam satisfeitas</returns>
+        public bool ChangePassword(string newPassword)
+        {
+            if (this.ChangeUserPasswordIsValid(newPassword))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// Método para obter todos os Lgos de Usuário
+        /// </summary>
+        /// <returns>Retorna uma Lista de Logs pertencente à um Usuário</returns>
+        public List<UserLog> GetLogs()
+        {
+            return this.UserLogs;
+        }
         #endregion
 
     }

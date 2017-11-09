@@ -1,4 +1,4 @@
-﻿using Esperanto.Domain.Enums.ProjectLog;
+﻿using Esperanto.Domain.Enums.Logs;
 using System;
 
 
