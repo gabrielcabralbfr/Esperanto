@@ -12,11 +12,9 @@ namespace Esperanto.Domain.Commands.CompanyCommands
         /// <summary>
         /// Construtor que recebe atributos do Objeto Company a ser criado
         /// </summary>
-        /// <param name="companyId">ID</param>
         /// <param name="name">Nome da Company</param>
-        public CreateCompanyCommand(Guid companyId, string name)
+        public CreateCompanyCommand(string name)
         {
-            this.CompanyId = companyId;
             this.Name = name;
             this.CreatedOn = DateTime.Now;
             this.CompanyStatus = ECompanyStatus.Active;
@@ -25,10 +23,6 @@ namespace Esperanto.Domain.Commands.CompanyCommands
 
 
         #region Properties
-        /// <summary>
-        /// Company ID
-        /// </summary>
-        public Guid CompanyId { get; set; }
 
         /// <summary>
         /// Nome da empresa

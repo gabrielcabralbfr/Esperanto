@@ -16,7 +16,7 @@ namespace Esperanto.Domain.Entities
         /// <summary>
         /// Construtor padrão
         /// </summary>
-        public ProjectIntegration() { }
+        protected ProjectIntegration() { }
 
 
         /// <summary>
@@ -25,7 +25,7 @@ namespace Esperanto.Domain.Entities
         /// <param name="command">Comando de criação com as propriedades da Entidade</param>
         public ProjectIntegration(CreateProjectIntegrationCommand command)
         {
-            ProjectIntegrationId = command.ProjectIntegrationId;
+            ProjectIntegrationId = Guid.NewGuid();
             ServerPath = command.ServerPath;
             Username = command.Username;
             Password = command.Password;
@@ -105,9 +105,25 @@ namespace Esperanto.Domain.Entities
         /// Método de criação de uma integração do projeto
         /// </summary>
         /// <param name="projectIntegration">Integração a ser criada</param>
+        /// <returns>Retorna true caso a atualização tenho sido bem sucedida</returns>
         public bool CreateProjectIntegration(ProjectIntegration projectIntegration)
         {
             if (this.CreateProjectIntegrationScopeIsValid())
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// Método de atualização de uma integração do projeto
+        /// </summary>
+        /// <param name="projectIntegration">Integração a ser atualizada</param>
+        /// <returns>Retorna true caso a atualização tenho sido bem sucedida</returns>
+        public bool UpdateProjectIntegration(ProjectIntegration projectIntegration)
+        {
+            if (this.UpdateProjectIntegrationScopeIsValid())
             {
                 return true;
             }

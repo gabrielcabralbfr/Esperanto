@@ -23,7 +23,7 @@ namespace Esperanto.Domain.Entities
         /// <param name="command">Comando de criação do Log</param>
         public ProjectLog(CreateProjectLogCommand command)
         {
-            ProjectLogId = command.ProjectLogId;
+            ProjectLogId = Guid.NewGuid();
             CreatedOn = command.CreatedOn;
             Description = command.Description;
             LogType = command.LogType;

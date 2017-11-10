@@ -31,7 +31,7 @@ namespace Esperanto.Domain.Scopes
         /// </summary>
         /// <param name="projectIntegration">Integração a ser atualizada</param>
         /// <returns>Retorna true caso todas as validações sejam satisfeitas</returns>
-        public static bool UpdateProjectIntegrationScopeIsValid(ProjectIntegration projectIntegration)
+        public static bool UpdateProjectIntegrationScopeIsValid(this ProjectIntegration projectIntegration)
         {
             return projectIntegration.CreateProjectIntegrationScopeIsValid();
         }

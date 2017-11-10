@@ -21,11 +21,11 @@ namespace Esperanto.Domain.Entities
         /// <summary>
         /// Método construtor da entidade CompanyLog que recebe o command de criação
         /// </summary>
-        /// <param name="command"></param>
+        /// <param name="command">Comando de criação do Log</param>
         public CompanyLog(CreateCompanyLogCommand command)
         {
-            this.CompanyLogId = command.CompanyLogId;
-            this.CreatedOn = command.CreatedOn;
+            this.CompanyLogId = Guid.NewGuid();
+            this.CreatedOn = DateTime.Now;
             this.Description = command.Description;
             this.LogType = command.LogType;
         }

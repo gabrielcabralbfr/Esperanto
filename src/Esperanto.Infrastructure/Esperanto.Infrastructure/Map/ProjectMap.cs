@@ -1,6 +1,4 @@
 ﻿using Esperanto.Domain.Entities;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 
@@ -39,6 +37,16 @@ namespace Esperanto.Infrastructure.Map
             Property(p => p.Description)
                 .HasMaxLength(500)
                 .IsRequired();
+
+            // Mapeando para o banco propriedade CreateOn 
+            Property(p => p.CreatedOn)
+                .IsRequired();
+
+
+            // Mapeando para o banco propriedade ModifiedOn 
+            Property(p => p.CreatedOn)
+                .IsRequired();
+
 
             // Mapeando para o banco propriedade FileType 
             Property(p => p.FileType)

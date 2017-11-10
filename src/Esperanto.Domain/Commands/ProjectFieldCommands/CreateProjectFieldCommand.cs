@@ -12,9 +12,8 @@ namespace Esperanto.Domain.Commands.ProjectFieldCommands
         /// <param name="projectFieldId">ID do Project Field</param>
         /// <param name="name">Nome do Campo</param>
         /// <param name="orderPosition">Posição do Campo</param>
-        public CreateProjectFieldCommand(Guid projectFieldId, string name, int orderPosition)
+        public CreateProjectFieldCommand(string name, int orderPosition)
         {
-            this.ProjectFieldId = projectFieldId;
             this.Name = name;
             this.OrderPosition = orderPosition;
         }
@@ -22,11 +21,6 @@ namespace Esperanto.Domain.Commands.ProjectFieldCommands
         #endregion
 
         #region Properties
-
-        /// <summary>
-        /// ID do campo
-        /// </summary>
-        public Guid ProjectFieldId { get; set; }
 
         /// <summary>
         /// Nome do campo

@@ -26,11 +26,13 @@ namespace Esperanto.Domain.Entities
         /// <param name="command">Comando de criação</param>
         public Project(CreateProjectCommand command)
         {
-            this.ProjectId = command.ProjectId;
+            this.ProjectId = Guid.NewGuid();
             this.Name = command.Name;
             this.LicenseId = command.LicenseId;
             this.PermissionId = command.PermissionId;
             this.Description = command.Description;
+            this.CreatedOn = DateTime.Now;
+            this.ModifiedOn = DateTime.Now;
             this.FileType = command.FileType;
             this.DivisorChar = command.DivisorChar;
             this.FileName = command.FileName;
@@ -69,6 +71,19 @@ namespace Esperanto.Domain.Entities
         /// Descrição do projeto
         /// </summary>
         public string Description { get; private set; }
+
+
+        /// <summary>
+        /// Data de criação do Projeto no sistema
+        /// </summary>
+        public DateTime CreatedOn { get; private set; }
+
+
+        /// <summary>
+        /// Data de modificação do Projeto no sistema
+        /// </summary>
+        public DateTime ModifiedOn { get; private set; }
+
 
         /// <summary>
         /// Tipo de arquivo do projeto
@@ -216,7 +231,7 @@ namespace Esperanto.Domain.Entities
         {
             return this.ProjectLogs;
         }
-        #endregion
+
 
         /// <summary>
         /// Método para obter todos os campos do arquivo de um Projeto
@@ -227,6 +242,6 @@ namespace Esperanto.Domain.Entities
             return this.ProjectFields;
         }
 
-
+        #endregion
     }
 }

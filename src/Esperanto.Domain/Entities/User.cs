@@ -1,22 +1,37 @@
-﻿using Esperanto.Domain.Enums.User;
+﻿using Esperanto.Domain.Commands.UserCommands;
+using Esperanto.Domain.Enums.User;
 using Esperanto.Domain.Scopes;
 using System;
 using System.Collections.Generic;
 
 namespace Esperanto.Domain.Entities
 {
+    /// <summary>
+    /// Entidade para o Usuário do sistema
+    /// </summary>
     public class User
     {
         #region Constructor
-        public User(string name, string email, string password, EUserRole userRole)
+
+        /// <summary>
+        /// Construtor padrão
+        /// </summary>
+        protected User() { }
+
+
+        /// <summary>
+        /// Método construtor da Entidade Usuário
+        /// </summary>
+        /// <param name="command">Comando de criação do usuário</param>
+        public User(CreateUserCommand command)
         {
             UserId = Guid.NewGuid();
-            this.Name = name;
-            this.Email = email;
-            this.Password = password;
+            this.Name = command.Name;
+            this.Email = command.Email;
+            this.Password = command.Password;
             CreatedOn = DateTime.Now;
             this.UserStatus = EUserStatus.Active;
-            UserRole = userRole;
+            UserRole = command.UserRole;
 
         }
         #endregion
@@ -26,57 +41,57 @@ namespace Esperanto.Domain.Entities
         /// <summary>
         /// ID do usuário
         /// </summary>
-        public Guid UserId { get; set; }
+        public Guid UserId { get; private set; }
 
         /// <summary>
         /// Nome do usuário
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; private set; }
 
         /// <summary>
         /// E-mail do usuário
         /// </summary>
-        public string Email { get; set; }
+        public string Email { get; private set; }
 
         /// <summary>
         /// Senha do usuário
         /// </summary>
-        public string Password { get; set; }
+        public string Password { get; private set; }
 
         /// <summary>
         /// Data de criação do usuário
         /// </summary>
-        public DateTime CreatedOn { get; set; }
+        public DateTime CreatedOn { get; private set; }
 
         /// <summary>
         /// Data de modificação do usuário
         /// </summary>
-        public DateTime ModifiedOn { get; set; }
+        public DateTime ModifiedOn { get; private set; }
 
         /// <summary>
         /// Status do usuário
         /// </summary>
-        public EUserStatus UserStatus { get; set; }
+        public EUserStatus UserStatus { get; private set; }
 
         /// <summary>
         /// Perfil do usuário
         /// </summary>
-        public EUserRole UserRole { get; set; }
+        public EUserRole UserRole { get; private set; }
 
         /// <summary>
         /// Key para API
         /// </summary>
-        public Guid ApiKey { get; set; }
+        public Guid ApiKey { get; private set; }
 
         /// <summary>
         /// UserLog ID
         /// </summary>
-        public Guid UserLogId { get; set; }
+        public Guid UserLogId { get; private set; }
 
         /// <summary>
         /// UserLogs
         /// </summary>
-        public List<UserLog> UserLogs { get; set; }
+        public List<UserLog> UserLogs { get; private set; }
         #endregion
 
         #region Methods

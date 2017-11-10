@@ -15,10 +15,10 @@ namespace Esperanto.Domain.Entities
         /// <summary>
         /// Método construtor que recebe o comando de criação da Entidade ProjectField
         /// </summary>
-        /// <param name="command">Comando de ce</param>
+        /// <param name="command">Comando de criação do campo do Projeto</param>
         public ProjectField(CreateProjectFieldCommand command)
         {
-            ProjectFieldId = command.ProjectFieldId;
+            ProjectFieldId = Guid.NewGuid();
             Name = command.Name;
             OrderPosition = command.OrderPosition;
         }
@@ -64,7 +64,7 @@ namespace Esperanto.Domain.Entities
         #region Methods
 
         /// <summary>
-        /// Método para criação de um Campo para o Projeto 
+        /// Método para criação de um Campo de um arquivo do Projeto 
         /// </summary>
         /// <param name="projectField">Campo a ser criado</param>
         /// <returns>Retorna true caso a validação seja satisfeita e o campo possa ser criado</returns>
@@ -78,7 +78,20 @@ namespace Esperanto.Domain.Entities
             return false;
         }
 
+        /// <summary>
+        /// Método para edição de um Campo de um arquivo do Projeto
+        /// </summary>
+        /// <param name="projectField"></param>
+        /// <returns>Retorna true caso a validação seja satisfeita e o campo possa ser criado</returns>s
+        public bool UpdateProjectField(ProjectField projectField)
+        {
+            if (this.UpdateProjectFieldScopeIsValid())
+            {
+                return true;
+            }
 
+            return false;
+        }
 
         #endregion
     }

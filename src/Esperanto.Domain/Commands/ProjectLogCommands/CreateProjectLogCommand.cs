@@ -12,12 +12,10 @@ namespace Esperanto.Domain.Commands.ProjectLogCommands
         /// <summary>
         /// Construtor que recebe atributos do Objeto ProjectLog a ser criado
         /// </summary>
-        /// <param name="projectLogId">ID do ProjectLog</param>
         /// <param name="description">Descrição do Log</param>
         /// <param name="logType">Descrição do tipo do log a ser criado</param>
-        public CreateProjectLogCommand(Guid projectLogId, string description, ELogType logType)
+        public CreateProjectLogCommand(string description, ELogType logType)
         {
-            this.ProjectLogId = projectLogId;
             this.Description = description;
             this.CreatedOn = DateTime.Now;
             this.LogType = logType;
@@ -26,12 +24,6 @@ namespace Esperanto.Domain.Commands.ProjectLogCommands
         #endregion
 
         #region Properties
-
-        /// <summary>
-        /// Project Log ID
-        /// </summary>
-        public Guid ProjectLogId { get; set; }
-
 
         /// <summary>
         /// Data de criação do log

@@ -12,21 +12,17 @@ namespace Esperanto.Domain.Commands.ProjectIntegrationCommands
         /// <summary>
         /// Consstrutor quqe recebe os atributos do Objeto ProjectIntegration a ser criado
         /// </summary>
-        /// <param name="projectIntegrationId">ID da integração</param>
         /// <param name="serverPath">Caminho do Servidor para a integração</param>
         /// <param name="username">Nome de usuário para a integração</param>
         /// <param name="password">Senha do usuário para integração</param>
         /// <param name="deleteFile">Flag (Boolean) para determinar se o arquivo será deletado</param>
         /// <param name="migrationInterval">Intervalo de migração</param>
-        public CreateProjectIntegrationCommand(Guid projectIntegrationId, string serverPath, string username, string password, bool deleteFile, int migrationInterval, EProjectIntegrationIntervalType intervalType)
+        public CreateProjectIntegrationCommand(string serverPath, string username, string password, bool deleteFile, int migrationInterval, EProjectIntegrationIntervalType intervalType)
         {
-            this.ProjectIntegrationId = projectIntegrationId;
             this.ServerPath = serverPath;
             this.Username = username;
             this.Password = password;
             this.DeleteFile = deleteFile;
-            this.FirstMigrationDate = DateTime.Now;
-            this.LastMigrationDate = DateTime.Now;
             this.MigrationInterval = migrationInterval;
             this.IntervalType = intervalType;
         }
@@ -35,11 +31,6 @@ namespace Esperanto.Domain.Commands.ProjectIntegrationCommands
 
 
         #region Properties
-
-        /// <summary>
-        /// Project Integration ID
-        /// </summary>
-        public Guid ProjectIntegrationId { get; set; }
 
         /// <summary>
         /// Caminho do servidor para integração

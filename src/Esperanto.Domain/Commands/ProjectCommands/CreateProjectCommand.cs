@@ -11,7 +11,6 @@ namespace Esperanto.Domain.Commands.ProjectCommands
         /// <summary>
         /// Construtor que recebe os atributos do Objeto Project a ser criados
         /// </summary>
-        /// <param name="projectId">ID do Projeto</param>
         /// <param name="name">Nome do Projeto</param>
         /// <param name="licenseId">License ID da licença que pertence ao Projeto</param>
         /// <param name="permissionId">Permission ID da base que pertence ao Projeto</param>
@@ -22,10 +21,9 @@ namespace Esperanto.Domain.Commands.ProjectCommands
         /// <param name="errorEmail">E-mail em caso de erros na integração do projeto</param>
         /// <param name="sendType">Tipo de Envio</param>
         /// <param name="ignoreFirstLine">Boolean para Ignorar ou não o cabeçalho</param>
-        public CreateProjectCommand(Guid projectId, string name, Guid licenseId, Guid permissionId, string description, EFileType fileType, char divisorChar, string fileName, string errorEmail, ESendType sendType, bool ignoreFirstLine)
+        public CreateProjectCommand(string name, Guid licenseId, Guid permissionId, string description, EFileType fileType, char divisorChar, string fileName, string errorEmail, ESendType sendType, bool ignoreFirstLine)
         {
             
-            ProjectId = projectId;
             Name = name;
             LicenseId = licenseId;
             PermissionId = permissionId;
@@ -42,13 +40,7 @@ namespace Esperanto.Domain.Commands.ProjectCommands
         #endregion
 
 
-
         #region Properties
-
-        /// <summary>
-        /// ID do projeto
-        /// </summary>
-        public Guid ProjectId { get; set; }
 
         /// <summary>
         /// Nome do projeto
@@ -69,6 +61,7 @@ namespace Esperanto.Domain.Commands.ProjectCommands
         /// Descrição do projeto
         /// </summary>
         public string Description { get; set; }
+
 
         /// <summary>
         /// Tipo de arquivo do projeto

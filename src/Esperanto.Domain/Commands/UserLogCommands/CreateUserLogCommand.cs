@@ -4,6 +4,9 @@ using System;
 
 namespace Esperanto.Domain.Commands.UserLogCommands
 {
+    /// <summary>
+    /// Comando de criação de um Log de usuário
+    /// </summary>
     public class CreateUserLogCommand
     {
         #region Constructor
@@ -11,30 +14,18 @@ namespace Esperanto.Domain.Commands.UserLogCommands
         /// <summary>
         /// Construtor que recebe os atributos do Objeto UserLog a ser criado
         /// </summary>
-        /// <param name="userLogId">ID do UserLog</param>
         /// <param name="description">Descrção do Log</param>
-        public CreateUserLogCommand(Guid userLogId, string description)
+        public CreateUserLogCommand(Guid userLogId, string description, ELogType logType)
         {
-            this.UserLogId = userLogId;
-            this.CreatedOn = DateTime.Now;
             this.Description = description;
+            this.LogType = logType;
         }
 
         #endregion
 
 
         #region Properties
-
-        /// <summary>
-        /// ID do log do usuário
-        /// </summary>
-        public Guid UserLogId { get; set; }
-
-        /// <summary>
-        /// Data de criaçao do Log do Usuário
-        /// </summary>
-        public DateTime CreatedOn { get; set; }
-
+        
         /// <summary>
         /// Descrição do Log do usuário
         /// </summary>

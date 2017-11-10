@@ -24,7 +24,7 @@ namespace Esperanto.Domain.Entities
         /// <param name="command">Comando de criação de uma Company</param>
         public Company(CreateCompanyCommand command)
         {
-            this.CompanyId = command.CompanyId;
+            this.CompanyId = Guid.NewGuid();
             this.Name = command.Name;
             this.CreatedOn = command.CreatedOn;
             this.ModifiedOn = command.ModifiedOn;
@@ -83,7 +83,6 @@ namespace Esperanto.Domain.Entities
 
 
         #endregion
-
 
         #region Methods
 

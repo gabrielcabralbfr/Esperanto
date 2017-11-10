@@ -1,10 +1,6 @@
-﻿using Esperanto.Domain.Entities;
-using Esperanto.Domain.Enums.User;
+﻿using Esperanto.Domain.Enums.User;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Esperanto.Domain.Commands.UserCommands
 {
@@ -15,14 +11,12 @@ namespace Esperanto.Domain.Commands.UserCommands
         /// <summary>
         ///  Construtor que recebe os atributos do Objeto User a ser criado
         /// </summary>
-        /// <param name="userId">ID do usuário</param>
         /// <param name="email">E-mail do usuário</param>
         /// <param name="password">Senha do usuário</param>
         /// <param name="name">Nome do usuário</param>
         /// <param name="userRole">Perfil do usuário</param>
-        public CreateUserCommand(Guid userId, string email, string password, string name, EUserRole userRole)
+        public CreateUserCommand(string email, string password, string name, EUserRole userRole)
         {
-            this.UserId = userId;
             this.Email = email;
             this.Password = password;
             this.Name = name;
