@@ -1,4 +1,5 @@
 C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.SharedKernel\bin\Debug\GTL.WebStore.SharedKernel.dll
 C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.SharedKernel\bin\Debug\GTL.WebStore.SharedKernel.pdb
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.SharedKernel\obj\Debug\Esperanto.SharedKernel.csprojResolveAssemblyReference.cache
 C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.SharedKernel\obj\Debug\GTL.WebStore.SharedKernel.dll
 C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.SharedKernel\obj\Debug\GTL.WebStore.SharedKernel.pdb
