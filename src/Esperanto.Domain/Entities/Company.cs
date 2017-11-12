@@ -1,5 +1,6 @@
 ﻿using Esperanto.Domain.Commands.CompanyCommands;
 using Esperanto.Domain.Enums.Company;
+using Esperanto.Domain.Scopes;
 using System;
 using System.Collections.Generic;
 
@@ -32,6 +33,7 @@ namespace Esperanto.Domain.Entities
         }
 
         #endregion
+
 
         #region Properties
         /// <summary>
@@ -84,6 +86,7 @@ namespace Esperanto.Domain.Entities
 
         #endregion
 
+
         #region Methods
 
         /// <summary>
@@ -103,9 +106,19 @@ namespace Esperanto.Domain.Entities
             this.CompanyStatus = ECompanyStatus.Inactive;
         }
 
+        /// <summary>
+        /// Método para criação de uma Company
+        /// </summary>
+        /// <param name="company">Company a ser criada</param>
+        /// <returns>Retorna true caso as validações no escopo de criação sejam satisfeitas</returns>
         public bool CreateCompany(Company company)
         {
-            return false; //Not Implemented yet
+            if (this.CreateCompanyScopeIsValid())
+            {
+                return true;
+            }
+
+            return false;
         }
 
         /// <summary>

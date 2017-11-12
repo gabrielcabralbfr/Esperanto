@@ -165,6 +165,10 @@ namespace Esperanto.Domain.Entities
 
         #region Methods
 
+        /// <summary>
+        /// Método para criação de um Project
+        /// </summary>
+        /// <returns>Retorna true caso as validações do escopo de criação sejam satisfeitas</returns>
         public bool CreateProject()
         {
             if (this.CreateProjectScopeIsValid())
@@ -174,6 +178,10 @@ namespace Esperanto.Domain.Entities
             return false;
         }
 
+        /// <summary>
+        /// Método para atualização de um Project
+        /// </summary>
+        /// <returns>Retorna true caso as validações do escopo de atualização sejam satisfeitas</returns>
         public bool UpdateProject()
         {
             if (this.UpdateProjectScopeIsValid())

@@ -68,7 +68,7 @@ namespace Esperanto.Domain.Entities
         #region Methods
 
         /// <summary>
-        /// Método para criação
+        /// Método para criação do Log de uma Company
         /// </summary>
         /// <param name="companyLog">Log a ser criado</param>
         /// <returns>Retorna true caso a validação seja satisfeita e o Log possa ser criado</returns>
