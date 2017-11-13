@@ -14,6 +14,7 @@ namespace Esperanto.ApplicationService
 
         #endregion
 
+
         #region Constructor
 
         public ApplicationService(IUnitOfWork unitOfWork)

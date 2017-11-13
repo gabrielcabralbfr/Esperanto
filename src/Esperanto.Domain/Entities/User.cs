@@ -36,6 +36,7 @@ namespace Esperanto.Domain.Entities
         }
         #endregion
 
+
         #region Properties
 
         /// <summary>
@@ -93,6 +94,7 @@ namespace Esperanto.Domain.Entities
         /// </summary>
         public List<UserLog> UserLogs { get; private set; }
         #endregion
+
 
         #region Methods
 

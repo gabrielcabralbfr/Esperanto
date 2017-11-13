@@ -43,9 +43,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\src\Esperanto.Domain\Esperanto.Domain.csproj">
       <Project>{BE39260F-2376-4C38-840E-31A86B6BA3AB}</Project>
       <Name>Esperanto.Domain</Name>
@@ -58,6 +55,12 @@
       <Project>{23189BA2-2DC3-4CCD-9ACA-BA3E0084A969}</Project>
       <Name>Esperanto.SharedKernel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
