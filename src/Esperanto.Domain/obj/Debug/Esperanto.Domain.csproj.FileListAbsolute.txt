@@ -5,3 +5,11 @@ C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Espe
 C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Domain\obj\Debug\Esperanto.Domain.csprojResolveAssemblyReference.cache
 C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Domain\obj\Debug\Esperanto.Domain.dll
 C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Domain\obj\Debug\Esperanto.Domain.pdb
+C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Domain\bin\Debug\Esperanto.Domain.dll
+C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Domain\bin\Debug\Esperanto.Domain.pdb
+C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Domain\bin\Debug\GTL.WebStore.SharedKernel.dll
+C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Domain\bin\Debug\GTL.WebStore.SharedKernel.pdb
+C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Domain\obj\Debug\Esperanto.Domain.csprojResolveAssemblyReference.cache
+C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Domain\obj\Debug\Esperanto.Domain.csproj.CoreCompileInputs.cache
+C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Domain\obj\Debug\Esperanto.Domain.dll
+C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Domain\obj\Debug\Esperanto.Domain.pdb

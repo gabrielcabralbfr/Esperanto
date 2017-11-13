@@ -46,19 +46,10 @@ namespace Esperanto.Domain.Scopes
         /// Método para fazer as validações no escopo de atualização do usuário
         /// </summary>
         /// <param name="user">Usuário a ser atualizado</param>
-        /// <param name="name">Novo valor para o Nome</param>
-        /// <param name="email">Novo valor para o E-mail</param>
         /// <returns>Retorna true caso todas as validações sejam satisfeitas</returns>
-        public static bool UpdateUserScopeIsValid(this User user, string name, string email)
+        public static bool UpdateUserScopeIsValid(this User user)
         {
-            return AssertionConcern.IsSatisfiedBy
-            (
-                AssertionConcern.AssertNotEmpty(name, "O Nome não pode estar vazio."),
-                AssertionConcern.AssertLength(name, 3, 20, "O nome de usuário precisa ter no mínimo 3 caracteres e no máximo 20"),
-                AssertionConcern.AssertNotEmpty(email, "O Nome não pode estar vazio."),
-                AssertionConcern.AssertLength(email, 5, 60, "O e-mail de usuário precisa ter no mínimo 5 caracteres e no máximo 60"),
-                AssertionConcern.AssertEmailIsValid(email, "O e-mail é inválido")
-            );
+            return user.CreateUserScopeIsValid();
         }
 
         /// <summary>

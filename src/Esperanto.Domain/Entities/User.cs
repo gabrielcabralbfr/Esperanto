@@ -130,6 +130,21 @@ namespace Esperanto.Domain.Entities
         }
 
         /// <summary>
+        /// Método para verificar se há erros na atualização de um usuário
+        /// </summary>
+        /// <param name="user">Usuário a ser atualizado</param>
+        /// <returns>Retorna true caso todas as validações de escopo sejam satisfeitas</returns>
+        public bool UpdateUser(User user)
+        {
+            if (this.UpdateUserScopeIsValid())
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        /// <summary>
         ///  Método para tornar um Usuário ativo
         /// </summary>
         public void ActivateUser()

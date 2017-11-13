@@ -34,7 +34,7 @@ namespace Esperanto.Domain.Services
         /// Método para deletar um usuário
         /// </summary>
         /// <param name="command">Comando de exclusão do usuário contendo todos os atributos</param>
-        void Delete(DeleteUserCommand command);
+        User Delete(Guid UserId);
 
         /// <summary>
         /// Método para atualizar um usuário
