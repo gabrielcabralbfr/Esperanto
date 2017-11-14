@@ -121,6 +121,7 @@ namespace Esperanto.Domain.Entities
             return false;
         }
 
+
         /// <summary>
         /// Método para obter todos os projetos da Empresa
         /// </summary>

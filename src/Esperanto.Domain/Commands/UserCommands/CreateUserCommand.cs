@@ -17,6 +17,7 @@ namespace Esperanto.Domain.Commands.UserCommands
         /// <param name="userRole">Perfil do usuário</param>
         public CreateUserCommand(string email, string password, string name, EUserRole userRole)
         {
+            this.UserId = Guid.NewGuid();
             this.Email = email;
             this.Password = password;
             this.Name = name;

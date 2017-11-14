@@ -37,7 +37,6 @@
   <ItemGroup>
     <Compile Include="Commands\CompanyCommands\CreateCompanyCommand.cs" />
     <Compile Include="Commands\CompanyCommands\DeleteCompanyCommand.cs" />
-    <Compile Include="Commands\CompanyCommands\UpdateCompanyCommand.cs" />
     <Compile Include="Commands\CompanyLogCommands\CreateCompanyLogCommand.cs" />
     <Compile Include="Commands\ProjectCommands\CreateProjectCommand.cs" />
     <Compile Include="Commands\ProjectCommands\DeleteProjectCommand.cs" />

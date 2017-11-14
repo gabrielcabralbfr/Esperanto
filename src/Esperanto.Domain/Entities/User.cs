@@ -25,11 +25,11 @@ namespace Esperanto.Domain.Entities
         /// <param name="command">Comando de criação do usuário</param>
         public User(CreateUserCommand command)
         {
-            UserId = Guid.NewGuid();
+            UserId = command.UserId;
             this.Name = command.Name;
             this.Email = command.Email;
             this.Password = command.Password;
-            CreatedOn = DateTime.Now;
+            this.CreatedOn = command.CreatedOn;
             this.UserStatus = EUserStatus.Active;
             UserRole = command.UserRole;
 

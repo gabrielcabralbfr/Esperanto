@@ -31,18 +31,12 @@ namespace Esperanto.Domain.Services
         /// <returns>Retorna a Company criada</returns>
         Company Create(CreateCompanyCommand command);
 
-        /// <summary>
-        /// Método que recebe um comando de atualização de um Company
-        /// </summary>
-        /// <param name="command">Comando de atualização de um Company</param>
-        /// <returns>Retorna a Company atualizada</returns>
-        Company Update(UpdateCompanyCommand command);
 
         /// <summary>
         /// Método que recebe um comando de exclusão de uma Company
         /// </summary>
         /// <param name="command">Comando de exclusão da Company</param>
-        void Delete(DeleteCompanyCommand command);
+        Company Delete(DeleteCompanyCommand command);
 
         #endregion
     }

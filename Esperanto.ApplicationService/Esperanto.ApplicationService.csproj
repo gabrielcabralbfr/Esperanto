@@ -37,6 +37,9 @@
   <ItemGroup>
     <Compile Include="ApplicationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CompanyAppService.cs" />
+    <Compile Include="Services\CompanyLogAppService.cs" />
+    <Compile Include="Services\ProjectAppService.cs" />
     <Compile Include="Services\UserAppService.cs" />
   </ItemGroup>
   <ItemGroup>
