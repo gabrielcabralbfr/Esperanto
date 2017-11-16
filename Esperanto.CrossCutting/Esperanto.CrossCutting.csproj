@@ -43,6 +43,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Esperanto.ApplicationService\Esperanto.ApplicationService.csproj">
+      <Project>{1AFA9B59-FC36-4CF8-A0EA-B2C56EAB0E03}</Project>
+      <Name>Esperanto.ApplicationService</Name>
+    </ProjectReference>
     <ProjectReference Include="..\src\Esperanto.Domain\Esperanto.Domain.csproj">
       <Project>{BE39260F-2376-4C38-840E-31A86B6BA3AB}</Project>
       <Name>Esperanto.Domain</Name>

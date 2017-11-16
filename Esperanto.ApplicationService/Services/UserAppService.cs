@@ -5,6 +5,7 @@ using Esperanto.Domain.Commands.UserCommands;
 using Esperanto.Domain.Entities;
 using Esperanto.Infrastructure.UnitOfWork;
 using Esperanto.Domain.Repositories;
+using Esperanto.Domain.Enums.User;
 
 namespace Esperanto.ApplicationService.Services
 {
@@ -104,6 +105,67 @@ namespace Esperanto.ApplicationService.Services
             return _repository.Get();
         }
 
+
+        /// <summary>
+        /// Método para obter uma Lista de Users ignorando a quantidade informada no parâmetro skip
+        /// e selecionando a quantidade informada no parâmetro take
+        /// </summary>
+        /// <param name="skip">Quantidade de usuários que serão desconsiderados</param>
+        /// <param name="take">Quantidade de usuários que serão considerados</param>
+        /// <returns>Retorna List<User> - Quantidade de usuários informada, excluindo quantos usuários foram informados</returns>
+        public List<User> Get(int skip, int take)
+        {
+            return _repository.Get(skip, take);
+        }
+
+        /// <summary>
+        /// Método para buscar os usuários ativos
+        /// </summary>
+        /// <returns>Retorna List<User> dos usuários com status ativo </returns>
+        public List<User> GetActives()
+        {
+            return _repository.GetActives();
+        }
+
+        /// <summary>
+        /// Método para buscar os usuários inativos
+        /// </summary>
+        /// <returns>Retorna List<User> dos usuários com status inativo </returns>
+        public List<User> GetInactives()
+        {
+            return _repository.GetInactives();
+        }
+
+
+        /// <summary>
+        /// Método para buscar todos os usuários com ROLE = Admin
+        /// </summary>
+        /// <returns>Retorna Lista de usuários com Role = Admin</returns>
+        public List<User> GetAdmins()
+        {
+            return _repository.GetAdmins();
+        }
+
+
+        /// <summary>
+        /// Método para buscar todos os usuários com ROLE = Client
+        /// </summary>
+        /// <returns>Retorna Lista de usuários com Role = Client</returns>
+        public List<User> GetClients()
+        {
+            return _repository.GetClients();
+        }
+
+        /// <summary>
+        /// Método para buscar todos os usuários com ROLE = Collaborator
+        /// </summary>
+        /// <returns>Retorna Lista de usuários com Role = Collaborator</returns>
+        public List<User> GetCollaborators()
+        {
+            return _repository.GetCollaborators();
+        }
+
+
         /// <summary>
         /// Método para atualizar um usuário no repositório, verificando se há notificações no Domínio
         /// </summary>
@@ -122,6 +184,44 @@ namespace Esperanto.ApplicationService.Services
             }
 
             return null;
+        }
+
+        /// <summary>
+        /// Método para tornar um usuário ativo
+        /// </summary>
+        /// <param name="user">Usuário a ser ativado</param>
+        /// <returns>Retorna true caso o usuário tenha sido ativado</returns>
+        public bool ActivateUser(User user)
+        {
+            if (user.UserStatus.Equals(EUserStatus.Active))
+            {
+                return false;
+            }
+
+            user.ActivateUser();
+
+            _repository.Update(user);
+
+            return true;
+        }
+
+        /// <summary>
+        /// Método para tornar um usuário inativo
+        /// </summary>
+        /// <param name="user">Usuário a ser desativado</param>
+        /// <returns>Retorna true caso o usuário tenha sido desativado</returns>
+        public bool DeactivateUser(User user)
+        {
+            if (user.UserStatus.Equals(EUserStatus.Inactive))
+            {
+                return false;
+            }
+
+            user.DeactivateUser();
+
+            _repository.Update(user);
+
+            return true;
         }
 
         #endregion

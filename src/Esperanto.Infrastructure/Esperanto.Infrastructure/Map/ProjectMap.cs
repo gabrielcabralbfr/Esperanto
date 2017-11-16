@@ -25,13 +25,11 @@ namespace Esperanto.Infrastructure.Map
 
             // Mapeando para o banco propriedade LicenseId 
             Property(p => p.LicenseId)
-                .IsRequired()
-                .HasColumnType("nvarchar");
+                .IsRequired();
 
             // Mapeando para o banco propriedade PermissionId 
             Property(p => p.PermissionId)
-                .IsRequired()
-                .HasColumnType("nvarchar");
+                .IsRequired();
 
             // Mapeando para o banco propriedade Description 
             Property(p => p.Description)
@@ -50,8 +48,7 @@ namespace Esperanto.Infrastructure.Map
 
             // Mapeando para o banco propriedade FileType 
             Property(p => p.FileType)
-                .IsRequired()
-                .HasColumnType("nvarchar");
+                .IsRequired();
 
             //Mapeando para o banco a propriedade FileName
             Property(p => p.FileName)
@@ -64,18 +61,15 @@ namespace Esperanto.Infrastructure.Map
 
             // Mapeando para o banco propriedade SendType 
             Property(p => p.SendType)
-                .IsRequired()
-                .HasColumnType("nvarchar");
+                .IsRequired();
 
             // Mapeando para o banco propriedade IgnoreFirstLine 
             Property(p => p.IgnoreFirstLine)
-                .IsRequired()
-                .HasColumnType("bit");
+                .IsRequired();
 
             // Mapeando para o banco propriedade ProjectStatus 
             Property(p => p.ProjectStatus)
-                .IsRequired()
-                .HasColumnType("nvarchar");
+                .IsRequired();
 
 
             /* Relacionamentos */
@@ -83,7 +77,6 @@ namespace Esperanto.Infrastructure.Map
             HasRequired(p => p.Company)
                 .WithMany(c => c.Projects);
 
-            HasRequired(p => p.ProjectIntegration);
         }
     }
 }

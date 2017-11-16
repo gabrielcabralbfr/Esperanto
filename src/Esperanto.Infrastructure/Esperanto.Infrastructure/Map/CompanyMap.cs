@@ -35,7 +35,6 @@ namespace Esperanto.Infrastructure.Map
 
             // Mapeando para o banco propriedade CompanyStatus 
             Property(c => c.CompanyStatus)
-                .HasColumnType("nvarchar")
                 .IsRequired();
 
         }

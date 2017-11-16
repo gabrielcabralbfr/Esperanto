@@ -1,5 +1,6 @@
 ﻿using Esperanto.Domain.Commands.ProjectCommands;
 using Esperanto.Domain.Entities;
+using Esperanto.Domain.Enums.Project;
 using System.Collections.Generic;
 
 namespace Esperanto.Domain.Services
@@ -42,6 +43,28 @@ namespace Esperanto.Domain.Services
         /// </summary>
         /// <param name="command">Comando de exclusão do Projeto</param>
         void Delete(DeleteProjectCommand command);
+
+        /// <summary>
+        /// Método para tornar um projeto ativo
+        /// </summary>
+        bool Activate(Project project);
+
+        /// <summary>
+        /// Método para tornar um projeto inativo
+        /// </summary>
+        bool Dectivate(Project project);
+
+        /// <summary>
+        /// Método para alterar o tipo de envio do Projeto
+        /// </summary>
+        /// <param name="newType">Novo tipo de envio</param>
+        void ChangeSendType(Project project, ESendType newType);
+
+        /// <summary>
+        /// Método para alterar o tipo de arquivo do Projeto
+        /// </summary>
+        /// <param name="newType">Novo tipo de arquivo</param>
+        void ChangeFileType(Project project, EFileType newType);
 
         #endregion
     }

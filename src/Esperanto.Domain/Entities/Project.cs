@@ -169,7 +169,7 @@ namespace Esperanto.Domain.Entities
         /// Método para criação de um Project
         /// </summary>
         /// <returns>Retorna true caso as validações do escopo de criação sejam satisfeitas</returns>
-        public bool CreateProject()
+        public bool CreateProject(Project project)
         {
             if (this.CreateProjectScopeIsValid())
             {
@@ -182,7 +182,7 @@ namespace Esperanto.Domain.Entities
         /// Método para atualização de um Project
         /// </summary>
         /// <returns>Retorna true caso as validações do escopo de atualização sejam satisfeitas</returns>
-        public bool UpdateProject()
+        public bool UpdateProject(Project project)
         {
             if (this.UpdateProjectScopeIsValid())
             {
@@ -190,11 +190,6 @@ namespace Esperanto.Domain.Entities
             }
 
             return false;
-        }
-
-        public void SendErrorEmail()
-        {
-            // Not Implemented yet
         }
 
         /// <summary>

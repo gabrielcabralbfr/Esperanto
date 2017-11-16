@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Esperanto.Domain.Services
 {
-    public interface IProjectLogLogAppService
+    public interface IProjectLogAppService
     {
 
         #region Methods

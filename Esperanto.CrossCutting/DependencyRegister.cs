@@ -1,4 +1,6 @@
-﻿using Esperanto.Domain.Repositories;
+﻿using Esperanto.ApplicationService.Services;
+using Esperanto.Domain.Repositories;
+using Esperanto.Domain.Services;
 using Esperanto.Infrastructure.Context;
 using Esperanto.Infrastructure.Repositories;
 using Esperanto.Infrastructure.UnitOfWork;
@@ -26,7 +28,14 @@ namespace Esperanto.CrossCutting
             container.Register<IUserLogRepository, UserLogRepository>(Lifestyle.Scoped);
             container.Register<IUserRepository, UserRepository>(Lifestyle.Scoped);
 
-            //TODO: Register AppService Layer
+            container.Register<ICompanyAppService, CompanyAppService>(Lifestyle.Scoped);
+            container.Register<ICompanyLogAppService, CompanyLogAppService>(Lifestyle.Scoped);
+            container.Register<IProjectFieldAppService, ProjectFieldAppService>(Lifestyle.Scoped);
+            container.Register<IProjectIntegrationAppService, ProjectIntegrationAppService>(Lifestyle.Scoped);
+            container.Register<IProjectLogAppService, ProjectLogAppService>(Lifestyle.Scoped);
+            container.Register<IProjectAppService, ProjectAppService>(Lifestyle.Scoped);
+            container.Register<IUserLogAppService, UserLogAppService>(Lifestyle.Scoped);
+            container.Register<IUserAppService, UserAppService>(Lifestyle.Scoped);
         }
     }
 }

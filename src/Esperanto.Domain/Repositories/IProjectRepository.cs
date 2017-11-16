@@ -100,5 +100,6 @@ namespace Esperanto.Domain.Repositories
         /// <param name="permissionId">Código da Base Cadastral a ser buscado</param>
         /// <returns>Retorna uma lista de Projects que possuem o permissionId informado</returns>
         List<Project> GetByPermissionId(Guid permissionId);
+
     }
 }

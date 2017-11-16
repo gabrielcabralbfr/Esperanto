@@ -40,7 +40,11 @@
     <Compile Include="Services\CompanyAppService.cs" />
     <Compile Include="Services\CompanyLogAppService.cs" />
     <Compile Include="Services\ProjectAppService.cs" />
+    <Compile Include="Services\ProjectFieldAppService.cs" />
+    <Compile Include="Services\ProjectIntegrationAppService.cs" />
+    <Compile Include="Services\ProjectLogAppService.cs" />
     <Compile Include="Services\UserAppService.cs" />
+    <Compile Include="Services\UserLogAppService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\src\Esperanto.Domain\Esperanto.Domain.csproj">

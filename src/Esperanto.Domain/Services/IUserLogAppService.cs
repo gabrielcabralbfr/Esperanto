@@ -22,7 +22,7 @@ namespace Esperanto.Domain.Services
         /// <param name="skip">Quantidade de UserLog a serem desconsiderados</param>
         /// <param name="take">Quantidade de UserLog a serem obtidos</param>
         /// <returns>Retorna uma Lista de UserLog</returns>
-        List<Company> Get(int skip, int take);
+        List<UserLog> Get(int skip, int take);
 
         /// <summary>
         /// Método para criação do Log do Usuário

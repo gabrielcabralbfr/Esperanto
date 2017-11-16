@@ -28,7 +28,7 @@ namespace Esperanto.Domain.Services
         /// </summary>
         /// <param name="command">Comando de criação de Integrações do Projeto</param>
         /// <returns>Retorna a Integração do Projeto criado</returns>
-        Project Create(CreateProjectIntegrationCommand command);
+        ProjectIntegration Create(CreateProjectIntegrationCommand command);
 
         #endregion
     }

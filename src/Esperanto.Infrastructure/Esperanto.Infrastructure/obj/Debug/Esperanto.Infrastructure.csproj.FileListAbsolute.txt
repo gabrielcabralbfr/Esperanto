@@ -1,17 +1,3 @@
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\bin\Debug\Esperanto.Infrastructure.dll.config
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\bin\Debug\Esperanto.Infrastructure.dll
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\bin\Debug\Esperanto.Infrastructure.pdb
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\bin\Debug\EntityFramework.dll
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\bin\Debug\Esperanto.Domain.dll
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\bin\Debug\GTL.WebStore.SharedKernel.dll
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\bin\Debug\Esperanto.Domain.pdb
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\bin\Debug\EntityFramework.xml
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\bin\Debug\GTL.WebStore.SharedKernel.pdb
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\obj\Debug\Esperanto.Infrastructure.csprojResolveAssemblyReference.cache
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\obj\Debug\Esperanto.Infrastructure.dll
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\obj\Debug\Esperanto.Infrastructure.pdb
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\bin\Debug\Esperanto.Infrastructure.dll.config
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\bin\Debug\Esperanto.Infrastructure.dll
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\bin\Debug\Esperanto.Infrastructure.pdb
@@ -27,3 +13,17 @@ C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Infrastructure\Esperanto.Inf
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\obj\Debug\Esperanto.Infrastructure.csproj.CoreCompileInputs.cache
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\obj\Debug\Esperanto.Infrastructure.dll
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\obj\Debug\Esperanto.Infrastructure.pdb
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\bin\Debug\Esperanto.Infrastructure.dll.config
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\bin\Debug\Esperanto.Infrastructure.dll
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\bin\Debug\Esperanto.Infrastructure.pdb
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\bin\Debug\EntityFramework.dll
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\bin\Debug\Esperanto.Domain.dll
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\bin\Debug\GTL.WebStore.SharedKernel.dll
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\bin\Debug\Esperanto.Domain.pdb
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\bin\Debug\EntityFramework.xml
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\bin\Debug\GTL.WebStore.SharedKernel.pdb
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\obj\Debug\Esperanto.Infrastructure.csprojResolveAssemblyReference.cache
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\obj\Debug\Esperanto.Infrastructure.dll
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.Infrastructure\Esperanto.Infrastructure\obj\Debug\Esperanto.Infrastructure.pdb

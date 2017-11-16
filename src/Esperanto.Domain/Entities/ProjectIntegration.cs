@@ -93,7 +93,7 @@ namespace Esperanto.Domain.Entities
         public Guid ProjectId { get; private set; }
 
         /// <summary>
-        /// Projeto
+        /// Projeto da integração
         /// </summary>
         public Project Project { get; private set; }
         #endregion
