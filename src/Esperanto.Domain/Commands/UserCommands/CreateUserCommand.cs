@@ -23,7 +23,9 @@ namespace Esperanto.Domain.Commands.UserCommands
             this.Name = name;
             this.UserRole = userRole;
             this.CreatedOn = DateTime.Now;
+            this.ModifiedOn = DateTime.Now;
             this.UserStatus = EUserStatus.Active;
+            this.ApiKey = Guid.NewGuid();
 
         }
         #endregion
@@ -69,6 +71,11 @@ namespace Esperanto.Domain.Commands.UserCommands
         /// Perfil do usuário
         /// </summary>
         public EUserRole UserRole { get; set; }
+
+        /// <summary>
+        /// Key para API
+        /// </summary>
+        public Guid ApiKey { get; set; }
 
         #endregion
     }

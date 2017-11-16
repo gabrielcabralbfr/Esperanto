@@ -1,6 +1,7 @@
 ﻿using Esperanto.Domain.Commands.UserCommands;
 using Esperanto.Domain.Enums.User;
 using Esperanto.Domain.Scopes;
+using Esperanto.SharedKernel.Helpers;
 using System;
 using System.Collections.Generic;
 
@@ -28,8 +29,9 @@ namespace Esperanto.Domain.Entities
             UserId = command.UserId;
             this.Name = command.Name;
             this.Email = command.Email;
-            this.Password = command.Password;
+            this.Password = StringHelper.Encrypt(command.Password);
             this.CreatedOn = command.CreatedOn;
+            this.ModifiedOn = command.ModifiedOn;
             this.UserStatus = EUserStatus.Active;
             UserRole = command.UserRole;
 
@@ -84,10 +86,6 @@ namespace Esperanto.Domain.Entities
         /// </summary>
         public Guid ApiKey { get; private set; }
 
-        /// <summary>
-        /// UserLog ID
-        /// </summary>
-        public Guid UserLogId { get; private set; }
 
         /// <summary>
         /// UserLogs

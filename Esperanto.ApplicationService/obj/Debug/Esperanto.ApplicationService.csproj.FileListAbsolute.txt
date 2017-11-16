@@ -1,3 +1,17 @@
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\bin\Debug\Esperanto.ApplicationService.dll
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\bin\Debug\Esperanto.ApplicationService.pdb
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\bin\Debug\Esperanto.Domain.dll
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\bin\Debug\Esperanto.Infrastructure.dll
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\bin\Debug\GTL.WebStore.SharedKernel.dll
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\bin\Debug\EntityFramework.dll
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\bin\Debug\Esperanto.Domain.pdb
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\bin\Debug\Esperanto.Infrastructure.pdb
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\bin\Debug\Esperanto.Infrastructure.dll.config
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\bin\Debug\GTL.WebStore.SharedKernel.pdb
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\bin\Debug\EntityFramework.xml
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\obj\Debug\Esperanto.ApplicationService.csprojResolveAssemblyReference.cache
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\obj\Debug\Esperanto.ApplicationService.dll
+C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\obj\Debug\Esperanto.ApplicationService.pdb
 C:\Users\gabri\source\repos\Esperanto\Esperanto.ApplicationService\bin\Debug\Esperanto.ApplicationService.dll
 C:\Users\gabri\source\repos\Esperanto\Esperanto.ApplicationService\bin\Debug\Esperanto.ApplicationService.pdb
 C:\Users\gabri\source\repos\Esperanto\Esperanto.ApplicationService\bin\Debug\Esperanto.Domain.dll
@@ -13,17 +27,3 @@ C:\Users\gabri\source\repos\Esperanto\Esperanto.ApplicationService\obj\Debug\Esp
 C:\Users\gabri\source\repos\Esperanto\Esperanto.ApplicationService\obj\Debug\Esperanto.ApplicationService.csproj.CoreCompileInputs.cache
 C:\Users\gabri\source\repos\Esperanto\Esperanto.ApplicationService\obj\Debug\Esperanto.ApplicationService.dll
 C:\Users\gabri\source\repos\Esperanto\Esperanto.ApplicationService\obj\Debug\Esperanto.ApplicationService.pdb
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\bin\Debug\Esperanto.ApplicationService.dll
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\bin\Debug\Esperanto.ApplicationService.pdb
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\bin\Debug\Esperanto.Domain.dll
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\bin\Debug\Esperanto.Infrastructure.dll
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\bin\Debug\GTL.WebStore.SharedKernel.dll
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\bin\Debug\EntityFramework.dll
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\bin\Debug\Esperanto.Domain.pdb
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\bin\Debug\Esperanto.Infrastructure.pdb
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\bin\Debug\Esperanto.Infrastructure.dll.config
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\bin\Debug\GTL.WebStore.SharedKernel.pdb
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\bin\Debug\EntityFramework.xml
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\obj\Debug\Esperanto.ApplicationService.csprojResolveAssemblyReference.cache
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\obj\Debug\Esperanto.ApplicationService.dll
-C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\Esperanto.ApplicationService\obj\Debug\Esperanto.ApplicationService.pdb
