@@ -49,10 +49,6 @@ namespace Esperanto.ApplicationService.Services
         /// <returns>Retorna o usuário autenticado</returns>
         public User Authenticate(AuthenticateUserCommand command)
         {
-            var user = _repository.GetById(command.UserId);
-
-            user.AuthenticateUser(command.Email, command.Password);
-
             return _repository.Authenticate(command.Email, command.Password);
         }
 

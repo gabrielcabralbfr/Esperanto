@@ -19,6 +19,7 @@ namespace Esperanto.Api.Controllers
 
         [HttpGet]
         [Route("api/users")]
+        [Authorize]
         public Task<HttpResponseMessage> Get()
         {
             var users = _service.Get();
@@ -40,6 +41,14 @@ namespace Esperanto.Api.Controllers
             var user = _service.Create(command);
 
             return CreateResponse(HttpStatusCode.Created, user);
+        }
+
+        [HttpGet]
+        [Route("api/user/name")]
+        [Authorize(Roles = "Admin")]
+        public string Authenticate()
+        {
+            return User.Identity.Name;
         }
     }
 }
