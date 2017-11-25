@@ -33,7 +33,8 @@ namespace Esperanto.Domain.Entities
             this.CreatedOn = command.CreatedOn;
             this.ModifiedOn = command.ModifiedOn;
             this.UserStatus = EUserStatus.Active;
-            UserRole = command.UserRole;
+            this.UserRole = command.UserRole;
+            this.ApiKey = command.ApiKey;
 
         }
         #endregion

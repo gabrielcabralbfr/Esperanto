@@ -19,7 +19,6 @@ namespace Esperanto.Api.Controllers
 
         [HttpGet]
         [Route("api/users")]
-        [Authorize]
         public Task<HttpResponseMessage> Get()
         {
             var users = _service.Get();
