@@ -8,7 +8,7 @@ namespace Esperanto.Domain.ExternalServices
 {
     public interface IWebServices
     {
-        void IsertUpdate(string licenseId, string permissionId, string xmlData);
+        void InsertUpdate(string licenseId, string permissionId, string xmlData);
 
     }
 }
