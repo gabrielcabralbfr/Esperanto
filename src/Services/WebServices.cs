@@ -5,21 +5,19 @@ namespace Services
 {
     public class WebServices
     {
-        string license_id = "936068e1-c0e2-42a2-8639-8d220d25da81";
-        string permission_id = "332b8702-0280-4820-aa00-f56c8696de79";
-        string xml_data = "";
+        public string LicenseId { get; set; }
 
-        public string Insert_update()
+        public string PermissionId { get; set; }
+
+        public string xml_data { get; set; }
+
+
+        public void Insert_update(string LicenseId, string PermissionId, string xml_data)
         {
-
-            //questmanager_webserviceSoapClient webservice = new questmanager_webserviceSoapClient.qm_insert_update(license_id, permission_id, xml_data);
 
             questmanager_webserviceSoapClient WebService = new questmanager_webserviceSoapClient();
 
-            WebService.qm_insert_update(license_id, permission_id, xml_data);
-
-            return "";
-
+            WebService.qm_insert_update(LicenseId, PermissionId, xml_data);
         }
 
         

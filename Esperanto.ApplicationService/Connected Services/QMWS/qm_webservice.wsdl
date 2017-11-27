@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="questmanager_webservice" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="questmanager_webservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">SELECT, INSERT, UPDATE or DELETE</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="questmanager_webservice">
+      <s:element name="qm_insert_update">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="license_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="permission_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="xml_data" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="qm_insert_updateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="qm_insert_updateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="qm_insert_update_send_ext_notif">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="license_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="permission_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="xml_data" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="qm_insert_update_send_ext_notifResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="qm_insert_update_send_ext_notifResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="qm_delete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="license_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="permission_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="xml_data" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="qm_deleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="qm_deleteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="qm_delete_send_ext_notif">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="license_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="permission_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="xml_data" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="qm_delete_send_ext_notifResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="qm_delete_send_ext_notifResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="qm_select">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="license_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="permission_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="xml_data" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="qm_selectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="qm_selectResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="qm_select3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="license_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="permission_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="register_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="search_mode_int" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="xml_data" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="qm_select3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="qm_select3Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="qm_select2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="license_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="permission_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dt1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dt2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dt_mode_int" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="xml_data" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="qm_select2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="qm_select2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="qm_insert_updateSoapIn">
+    <wsdl:part name="parameters" element="tns:qm_insert_update" />
+  </wsdl:message>
+  <wsdl:message name="qm_insert_updateSoapOut">
+    <wsdl:part name="parameters" element="tns:qm_insert_updateResponse" />
+  </wsdl:message>
+  <wsdl:message name="qm_insert_update_send_ext_notifSoapIn">
+    <wsdl:part name="parameters" element="tns:qm_insert_update_send_ext_notif" />
+  </wsdl:message>
+  <wsdl:message name="qm_insert_update_send_ext_notifSoapOut">
+    <wsdl:part name="parameters" element="tns:qm_insert_update_send_ext_notifResponse" />
+  </wsdl:message>
+  <wsdl:message name="qm_deleteSoapIn">
+    <wsdl:part name="parameters" element="tns:qm_delete" />
+  </wsdl:message>
+  <wsdl:message name="qm_deleteSoapOut">
+    <wsdl:part name="parameters" element="tns:qm_deleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="qm_delete_send_ext_notifSoapIn">
+    <wsdl:part name="parameters" element="tns:qm_delete_send_ext_notif" />
+  </wsdl:message>
+  <wsdl:message name="qm_delete_send_ext_notifSoapOut">
+    <wsdl:part name="parameters" element="tns:qm_delete_send_ext_notifResponse" />
+  </wsdl:message>
+  <wsdl:message name="qm_selectSoapIn">
+    <wsdl:part name="parameters" element="tns:qm_select" />
+  </wsdl:message>
+  <wsdl:message name="qm_selectSoapOut">
+    <wsdl:part name="parameters" element="tns:qm_selectResponse" />
+  </wsdl:message>
+  <wsdl:message name="qm_select3SoapIn">
+    <wsdl:part name="parameters" element="tns:qm_select3" />
+  </wsdl:message>
+  <wsdl:message name="qm_select3SoapOut">
+    <wsdl:part name="parameters" element="tns:qm_select3Response" />
+  </wsdl:message>
+  <wsdl:message name="qm_select2SoapIn">
+    <wsdl:part name="parameters" element="tns:qm_select2" />
+  </wsdl:message>
+  <wsdl:message name="qm_select2SoapOut">
+    <wsdl:part name="parameters" element="tns:qm_select2Response" />
+  </wsdl:message>
+  <wsdl:message name="qm_insert_updateHttpGetIn">
+    <wsdl:part name="license_id" type="s:string" />
+    <wsdl:part name="permission_id" type="s:string" />
+    <wsdl:part name="xml_data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="qm_insert_updateHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="qm_insert_update_send_ext_notifHttpGetIn">
+    <wsdl:part name="license_id" type="s:string" />
+    <wsdl:part name="permission_id" type="s:string" />
+    <wsdl:part name="xml_data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="qm_insert_update_send_ext_notifHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="qm_deleteHttpGetIn">
+    <wsdl:part name="license_id" type="s:string" />
+    <wsdl:part name="permission_id" type="s:string" />
+    <wsdl:part name="xml_data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="qm_deleteHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="qm_delete_send_ext_notifHttpGetIn">
+    <wsdl:part name="license_id" type="s:string" />
+    <wsdl:part name="permission_id" type="s:string" />
+    <wsdl:part name="xml_data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="qm_delete_send_ext_notifHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="qm_selectHttpGetIn">
+    <wsdl:part name="license_id" type="s:string" />
+    <wsdl:part name="permission_id" type="s:string" />
+    <wsdl:part name="xml_data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="qm_selectHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="qm_select3HttpGetIn">
+    <wsdl:part name="license_id" type="s:string" />
+    <wsdl:part name="permission_id" type="s:string" />
+    <wsdl:part name="register_id" type="s:string" />
+    <wsdl:part name="search_mode_int" type="s:string" />
+    <wsdl:part name="xml_data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="qm_select3HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="qm_select2HttpGetIn">
+    <wsdl:part name="license_id" type="s:string" />
+    <wsdl:part name="permission_id" type="s:string" />
+    <wsdl:part name="dt1" type="s:string" />
+    <wsdl:part name="dt2" type="s:string" />
+    <wsdl:part name="dt_mode_int" type="s:string" />
+    <wsdl:part name="xml_data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="qm_select2HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="qm_insert_updateHttpPostIn">
+    <wsdl:part name="license_id" type="s:string" />
+    <wsdl:part name="permission_id" type="s:string" />
+    <wsdl:part name="xml_data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="qm_insert_updateHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="qm_insert_update_send_ext_notifHttpPostIn">
+    <wsdl:part name="license_id" type="s:string" />
+    <wsdl:part name="permission_id" type="s:string" />
+    <wsdl:part name="xml_data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="qm_insert_update_send_ext_notifHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="qm_deleteHttpPostIn">
+    <wsdl:part name="license_id" type="s:string" />
+    <wsdl:part name="permission_id" type="s:string" />
+    <wsdl:part name="xml_data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="qm_deleteHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="qm_delete_send_ext_notifHttpPostIn">
+    <wsdl:part name="license_id" type="s:string" />
+    <wsdl:part name="permission_id" type="s:string" />
+    <wsdl:part name="xml_data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="qm_delete_send_ext_notifHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="qm_selectHttpPostIn">
+    <wsdl:part name="license_id" type="s:string" />
+    <wsdl:part name="permission_id" type="s:string" />
+    <wsdl:part name="xml_data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="qm_selectHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="qm_select3HttpPostIn">
+    <wsdl:part name="license_id" type="s:string" />
+    <wsdl:part name="permission_id" type="s:string" />
+    <wsdl:part name="register_id" type="s:string" />
+    <wsdl:part name="search_mode_int" type="s:string" />
+    <wsdl:part name="xml_data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="qm_select3HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="qm_select2HttpPostIn">
+    <wsdl:part name="license_id" type="s:string" />
+    <wsdl:part name="permission_id" type="s:string" />
+    <wsdl:part name="dt1" type="s:string" />
+    <wsdl:part name="dt2" type="s:string" />
+    <wsdl:part name="dt_mode_int" type="s:string" />
+    <wsdl:part name="xml_data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="qm_select2HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="questmanager_webserviceSoap">
+    <wsdl:operation name="qm_insert_update">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">For insert or update one or multiple records. RETURN EMPTY STRING = Transaction commited, RETURN STRING ERROR MESSAGE = Transaction failed (rollback)</wsdl:documentation>
+      <wsdl:input message="tns:qm_insert_updateSoapIn" />
+      <wsdl:output message="tns:qm_insert_updateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="qm_insert_update_send_ext_notif">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">For insert or update one or multiple records and send HTTP POST notification to external location. RETURN EMPTY STRING = Transaction commited, RETURN STRING ERROR MESSAGE = Transaction failed (rollback)</wsdl:documentation>
+      <wsdl:input message="tns:qm_insert_update_send_ext_notifSoapIn" />
+      <wsdl:output message="tns:qm_insert_update_send_ext_notifSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="qm_delete">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">For delete one or multiple records. RETURN EMPTY STRING = Transaction commited, RETURN STRING ERROR MESSAGE = Transaction failed (rollback)</wsdl:documentation>
+      <wsdl:input message="tns:qm_deleteSoapIn" />
+      <wsdl:output message="tns:qm_deleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="qm_delete_send_ext_notif">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">For delete one or multiple records and send HTTP POST notification to external location. RETURN EMPTY STRING = Transaction commited, RETURN STRING ERROR MESSAGE = Transaction failed (rollback)</wsdl:documentation>
+      <wsdl:input message="tns:qm_delete_send_ext_notifSoapIn" />
+      <wsdl:output message="tns:qm_delete_send_ext_notifSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="qm_select">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">For select multiple records, use xml to specify wich records will be retrieved. RETURN XML with selected records, RETURN EMPTY STRING = No data or operation failed</wsdl:documentation>
+      <wsdl:input message="tns:qm_selectSoapIn" />
+      <wsdl:output message="tns:qm_selectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="qm_select3">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Use xml to specify wich questions will be retrieved (Using index="id_question" in COL xml_data). Use register_id to search and retrieve the selected record. Use search_mode_int (1 = Strict search, 2 = Pattern search or substring search). RETURN XML with selected records (Limited up to 10.000), RETURN EMPTY STRING = No data or operation failed</wsdl:documentation>
+      <wsdl:input message="tns:qm_select3SoapIn" />
+      <wsdl:output message="tns:qm_select3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="qm_select2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Use xml to specify wich questions will be retrieved (Using index="id_question" in COL xml_data). Use dt_mode_int (1 = Range of register creation, 2 = Range of register update, 3 = Range of any correlated interview). RETURN XML with selected records (Limited up to 10.000), RETURN EMPTY STRING = No data or operation failed</wsdl:documentation>
+      <wsdl:input message="tns:qm_select2SoapIn" />
+      <wsdl:output message="tns:qm_select2SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="questmanager_webserviceHttpGet">
+    <wsdl:operation name="qm_insert_update">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">For insert or update one or multiple records. RETURN EMPTY STRING = Transaction commited, RETURN STRING ERROR MESSAGE = Transaction failed (rollback)</wsdl:documentation>
+      <wsdl:input message="tns:qm_insert_updateHttpGetIn" />
+      <wsdl:output message="tns:qm_insert_updateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="qm_insert_update_send_ext_notif">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">For insert or update one or multiple records and send HTTP POST notification to external location. RETURN EMPTY STRING = Transaction commited, RETURN STRING ERROR MESSAGE = Transaction failed (rollback)</wsdl:documentation>
+      <wsdl:input message="tns:qm_insert_update_send_ext_notifHttpGetIn" />
+      <wsdl:output message="tns:qm_insert_update_send_ext_notifHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="qm_delete">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">For delete one or multiple records. RETURN EMPTY STRING = Transaction commited, RETURN STRING ERROR MESSAGE = Transaction failed (rollback)</wsdl:documentation>
+      <wsdl:input message="tns:qm_deleteHttpGetIn" />
+      <wsdl:output message="tns:qm_deleteHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="qm_delete_send_ext_notif">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">For delete one or multiple records and send HTTP POST notification to external location. RETURN EMPTY STRING = Transaction commited, RETURN STRING ERROR MESSAGE = Transaction failed (rollback)</wsdl:documentation>
+      <wsdl:input message="tns:qm_delete_send_ext_notifHttpGetIn" />
+      <wsdl:output message="tns:qm_delete_send_ext_notifHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="qm_select">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">For select multiple records, use xml to specify wich records will be retrieved. RETURN XML with selected records, RETURN EMPTY STRING = No data or operation failed</wsdl:documentation>
+      <wsdl:input message="tns:qm_selectHttpGetIn" />
+      <wsdl:output message="tns:qm_selectHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="qm_select3">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Use xml to specify wich questions will be retrieved (Using index="id_question" in COL xml_data). Use register_id to search and retrieve the selected record. Use search_mode_int (1 = Strict search, 2 = Pattern search or substring search). RETURN XML with selected records (Limited up to 10.000), RETURN EMPTY STRING = No data or operation failed</wsdl:documentation>
+      <wsdl:input message="tns:qm_select3HttpGetIn" />
+      <wsdl:output message="tns:qm_select3HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="qm_select2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Use xml to specify wich questions will be retrieved (Using index="id_question" in COL xml_data). Use dt_mode_int (1 = Range of register creation, 2 = Range of register update, 3 = Range of any correlated interview). RETURN XML with selected records (Limited up to 10.000), RETURN EMPTY STRING = No data or operation failed</wsdl:documentation>
+      <wsdl:input message="tns:qm_select2HttpGetIn" />
+      <wsdl:output message="tns:qm_select2HttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="questmanager_webserviceHttpPost">
+    <wsdl:operation name="qm_insert_update">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">For insert or update one or multiple records. RETURN EMPTY STRING = Transaction commited, RETURN STRING ERROR MESSAGE = Transaction failed (rollback)</wsdl:documentation>
+      <wsdl:input message="tns:qm_insert_updateHttpPostIn" />
+      <wsdl:output message="tns:qm_insert_updateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="qm_insert_update_send_ext_notif">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">For insert or update one or multiple records and send HTTP POST notification to external location. RETURN EMPTY STRING = Transaction commited, RETURN STRING ERROR MESSAGE = Transaction failed (rollback)</wsdl:documentation>
+      <wsdl:input message="tns:qm_insert_update_send_ext_notifHttpPostIn" />
+      <wsdl:output message="tns:qm_insert_update_send_ext_notifHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="qm_delete">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">For delete one or multiple records. RETURN EMPTY STRING = Transaction commited, RETURN STRING ERROR MESSAGE = Transaction failed (rollback)</wsdl:documentation>
+      <wsdl:input message="tns:qm_deleteHttpPostIn" />
+      <wsdl:output message="tns:qm_deleteHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="qm_delete_send_ext_notif">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">For delete one or multiple records and send HTTP POST notification to external location. RETURN EMPTY STRING = Transaction commited, RETURN STRING ERROR MESSAGE = Transaction failed (rollback)</wsdl:documentation>
+      <wsdl:input message="tns:qm_delete_send_ext_notifHttpPostIn" />
+      <wsdl:output message="tns:qm_delete_send_ext_notifHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="qm_select">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">For select multiple records, use xml to specify wich records will be retrieved. RETURN XML with selected records, RETURN EMPTY STRING = No data or operation failed</wsdl:documentation>
+      <wsdl:input message="tns:qm_selectHttpPostIn" />
+      <wsdl:output message="tns:qm_selectHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="qm_select3">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Use xml to specify wich questions will be retrieved (Using index="id_question" in COL xml_data). Use register_id to search and retrieve the selected record. Use search_mode_int (1 = Strict search, 2 = Pattern search or substring search). RETURN XML with selected records (Limited up to 10.000), RETURN EMPTY STRING = No data or operation failed</wsdl:documentation>
+      <wsdl:input message="tns:qm_select3HttpPostIn" />
+      <wsdl:output message="tns:qm_select3HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="qm_select2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Use xml to specify wich questions will be retrieved (Using index="id_question" in COL xml_data). Use dt_mode_int (1 = Range of register creation, 2 = Range of register update, 3 = Range of any correlated interview). RETURN XML with selected records (Limited up to 10.000), RETURN EMPTY STRING = No data or operation failed</wsdl:documentation>
+      <wsdl:input message="tns:qm_select2HttpPostIn" />
+      <wsdl:output message="tns:qm_select2HttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="questmanager_webserviceSoap" type="tns:questmanager_webserviceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="qm_insert_update">
+      <soap:operation soapAction="questmanager_webservice/qm_insert_update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qm_insert_update_send_ext_notif">
+      <soap:operation soapAction="questmanager_webservice/qm_insert_update_send_ext_notif" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qm_delete">
+      <soap:operation soapAction="questmanager_webservice/qm_delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qm_delete_send_ext_notif">
+      <soap:operation soapAction="questmanager_webservice/qm_delete_send_ext_notif" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qm_select">
+      <soap:operation soapAction="questmanager_webservice/qm_select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qm_select3">
+      <soap:operation soapAction="questmanager_webservice/qm_select3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qm_select2">
+      <soap:operation soapAction="questmanager_webservice/qm_select2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="questmanager_webserviceSoap12" type="tns:questmanager_webserviceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="qm_insert_update">
+      <soap12:operation soapAction="questmanager_webservice/qm_insert_update" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qm_insert_update_send_ext_notif">
+      <soap12:operation soapAction="questmanager_webservice/qm_insert_update_send_ext_notif" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qm_delete">
+      <soap12:operation soapAction="questmanager_webservice/qm_delete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qm_delete_send_ext_notif">
+      <soap12:operation soapAction="questmanager_webservice/qm_delete_send_ext_notif" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qm_select">
+      <soap12:operation soapAction="questmanager_webservice/qm_select" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qm_select3">
+      <soap12:operation soapAction="questmanager_webservice/qm_select3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qm_select2">
+      <soap12:operation soapAction="questmanager_webservice/qm_select2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="questmanager_webserviceHttpGet" type="tns:questmanager_webserviceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="qm_insert_update">
+      <http:operation location="/qm_insert_update" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qm_insert_update_send_ext_notif">
+      <http:operation location="/qm_insert_update_send_ext_notif" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qm_delete">
+      <http:operation location="/qm_delete" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qm_delete_send_ext_notif">
+      <http:operation location="/qm_delete_send_ext_notif" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qm_select">
+      <http:operation location="/qm_select" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qm_select3">
+      <http:operation location="/qm_select3" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qm_select2">
+      <http:operation location="/qm_select2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="questmanager_webserviceHttpPost" type="tns:questmanager_webserviceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="qm_insert_update">
+      <http:operation location="/qm_insert_update" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qm_insert_update_send_ext_notif">
+      <http:operation location="/qm_insert_update_send_ext_notif" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qm_delete">
+      <http:operation location="/qm_delete" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qm_delete_send_ext_notif">
+      <http:operation location="/qm_delete_send_ext_notif" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qm_select">
+      <http:operation location="/qm_select" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qm_select3">
+      <http:operation location="/qm_select3" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qm_select2">
+      <http:operation location="/qm_select2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="questmanager_webservice">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">SELECT, INSERT, UPDATE or DELETE</wsdl:documentation>
+    <wsdl:port name="questmanager_webserviceSoap" binding="tns:questmanager_webserviceSoap">
+      <soap:address location="https://www.questmanager.com/questmanager_webservice/qm_webservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="questmanager_webserviceSoap12" binding="tns:questmanager_webserviceSoap12">
+      <soap12:address location="https://www.questmanager.com/questmanager_webservice/qm_webservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="questmanager_webserviceHttpGet" binding="tns:questmanager_webserviceHttpGet">
+      <http:address location="https://www.questmanager.com/questmanager_webservice/qm_webservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="questmanager_webserviceHttpPost" binding="tns:questmanager_webserviceHttpPost">
+      <http:address location="https://www.questmanager.com/questmanager_webservice/qm_webservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

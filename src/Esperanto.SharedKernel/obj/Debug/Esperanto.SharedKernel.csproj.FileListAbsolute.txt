@@ -4,7 +4,6 @@ C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Espe
 C:\Users\gabri\onedrive\documents\visual studio 2017\Projects\Esperanto\src\Esperanto.SharedKernel\obj\Debug\GTL.WebStore.SharedKernel.pdb
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.SharedKernel\bin\Debug\GTL.WebStore.SharedKernel.dll
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.SharedKernel\bin\Debug\GTL.WebStore.SharedKernel.pdb
-C:\Users\gabri\source\repos\Esperanto\src\Esperanto.SharedKernel\obj\Debug\Esperanto.SharedKernel.csprojResolveAssemblyReference.cache
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.SharedKernel\obj\Debug\Esperanto.SharedKernel.csproj.CoreCompileInputs.cache
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.SharedKernel\obj\Debug\GTL.WebStore.SharedKernel.dll
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.SharedKernel\obj\Debug\GTL.WebStore.SharedKernel.pdb

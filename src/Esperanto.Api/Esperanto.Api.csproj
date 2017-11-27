@@ -121,6 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="app.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -151,6 +152,10 @@
     <ProjectReference Include="..\Esperanto.SharedKernel\Esperanto.SharedKernel.csproj">
       <Project>{23189BA2-2DC3-4CCD-9ACA-BA3E0084A969}</Project>
       <Name>Esperanto.SharedKernel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{2D22380C-4613-4365-AE12-9635AA9787CC}</Project>
+      <Name>Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

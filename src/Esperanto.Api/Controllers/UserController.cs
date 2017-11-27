@@ -1,6 +1,8 @@
 ﻿using Esperanto.Domain.Commands.UserCommands;
 using Esperanto.Domain.Enums.User;
 using Esperanto.Domain.Services;
+using Services;
+using System;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -27,7 +29,7 @@ namespace Esperanto.Api.Controllers
         }
 
         [HttpPost]
-        [Route("api/users")]
+        [Route("api/users/new")]
         public Task<HttpResponseMessage> Post([FromBody]dynamic body)
         {
             var command = new CreateUserCommand(
@@ -41,6 +43,37 @@ namespace Esperanto.Api.Controllers
 
             return CreateResponse(HttpStatusCode.Created, user);
         }
+
+        //[HttpPost]
+        //[Route("api/users/webservice")]
+        //public Task<HttpResponseMessage> PostXML([FromBody]dynamic body)
+        //{
+
+
+        //    _service.Insert_update(
+        //        LicenseId: (string)body.licenseId,
+        //        PermissionId: (string)body.permissionId,
+        //        xml_data: (string)body.xml_data
+        //        );
+
+
+        //    return CreateResponse(HttpStatusCode.Created, _service);
+        //}
+
+        [HttpPost]
+        [Route("api/users/delete")]
+        public Task<HttpResponseMessage> DeleteUser([FromBody]dynamic body)
+        {
+            var command = new DeleteUserCommand(
+                    userId: (Guid)body.userId
+
+                );
+
+            var user = _service.Delete(command.UserId);
+
+            return CreateResponse(HttpStatusCode.OK, user);
+        }
+
 
         [HttpGet]
         [Route("api/user/name")]

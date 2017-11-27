@@ -25,6 +25,7 @@ C:\Users\gabri\source\repos\Esperanto\Esperanto.CrossCutting\bin\Debug\GTL.WebSt
 C:\Users\gabri\source\repos\Esperanto\Esperanto.CrossCutting\bin\Debug\SimpleInjector.dll
 C:\Users\gabri\source\repos\Esperanto\Esperanto.CrossCutting\bin\Debug\EntityFramework.dll
 C:\Users\gabri\source\repos\Esperanto\Esperanto.CrossCutting\bin\Debug\Esperanto.ApplicationService.pdb
+C:\Users\gabri\source\repos\Esperanto\Esperanto.CrossCutting\bin\Debug\Esperanto.ApplicationService.dll.config
 C:\Users\gabri\source\repos\Esperanto\Esperanto.CrossCutting\bin\Debug\Esperanto.Domain.pdb
 C:\Users\gabri\source\repos\Esperanto\Esperanto.CrossCutting\bin\Debug\Esperanto.Infrastructure.pdb
 C:\Users\gabri\source\repos\Esperanto\Esperanto.CrossCutting\bin\Debug\Esperanto.Infrastructure.dll.config
