@@ -1,12 +1,13 @@
 ﻿using Esperanto.Domain.Commands.UserCommands;
 using Esperanto.Domain.Enums.User;
 using Esperanto.Domain.Services;
-using Services;
+using External_Services;
 using System;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Services;
 
 namespace Esperanto.Api.Controllers
 {
@@ -45,16 +46,14 @@ namespace Esperanto.Api.Controllers
         }
 
         [HttpPost]
-        [Route("api/users/webservice")]
+        [Route("api/users/insert_update")]
         public Task<HttpResponseMessage> PostXML([FromBody]dynamic body)
         {
 
-            WebServices webservice = new WebServices();
-
-            webservice.Insert_update(
-                LicenseId: (string)body.licenseId,
-                PermissionId: (string)body.permissionId,
-                xml_data: (string)body.xml_data
+            WebServices.InsertUpdate(
+                licenseId: (string)body.licenseId,
+                permissionId: (string)body.permissionId,
+                xmlData: (string)body.xml_data
                 );
 
 

@@ -66,6 +66,7 @@
     <Compile Include="Enums\Project\ESendType.cs" />
     <Compile Include="Enums\User\EUserRole.cs" />
     <Compile Include="Enums\User\EUserStatus.cs" />
+    <Compile Include="External Services\IWebServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ICompanyLogRepository.cs" />
     <Compile Include="Repositories\ICompanyRepository.cs" />

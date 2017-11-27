@@ -98,6 +98,7 @@ C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Api\bin\EntityFramework.dll
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Api\bin\EntityFramework.SqlServer.dll
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Api\bin\Esperanto.CrossCutting.dll
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Api\bin\Esperanto.Domain.dll
+C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Api\bin\External Services.dll
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Api\bin\GTL.WebStore.SharedKernel.dll
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Api\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Api\bin\Microsoft.Owin.Cors.dll
@@ -107,7 +108,6 @@ C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Api\bin\Microsoft.Owin.Secur
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Api\bin\Microsoft.Owin.Security.OAuth.dll
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Api\bin\Newtonsoft.Json.dll
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Api\bin\Owin.dll
-C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Api\bin\Services.dll
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Api\bin\SimpleInjector.dll
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Api\bin\SimpleInjector.Extensions.ExecutionContextScoping.dll
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Api\bin\SimpleInjector.Integration.WebApi.dll
@@ -121,8 +121,8 @@ C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Api\bin\Esperanto.Applicatio
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Api\bin\Esperanto.CrossCutting.pdb
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Api\bin\Esperanto.Domain.pdb
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Api\bin\GTL.WebStore.SharedKernel.pdb
-C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Api\bin\Services.pdb
-C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Api\bin\Services.dll.config
+C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Api\bin\External Services.pdb
+C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Api\bin\External Services.dll.config
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Api\bin\EntityFramework.xml
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Api\bin\EntityFramework.SqlServer.xml
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.Api\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml

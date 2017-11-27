@@ -141,7 +141,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Esperanto.CrossCutting\Esperanto.CrossCutting.csproj">
+    <ProjectReference Include="..\Esperanto.CrossCutting\Esperanto.CrossCutting.csproj">
       <Project>{6B5E1097-49A3-4732-8B50-728F63C02CC4}</Project>
       <Name>Esperanto.CrossCutting</Name>
     </ProjectReference>
@@ -153,9 +153,9 @@
       <Project>{23189BA2-2DC3-4CCD-9ACA-BA3E0084A969}</Project>
       <Name>Esperanto.SharedKernel</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Services\Services.csproj">
-      <Project>{2D22380C-4613-4365-AE12-9635AA9787CC}</Project>
-      <Name>Services</Name>
+    <ProjectReference Include="..\External Services\External Services.csproj">
+      <Project>{2AB35F4F-DA65-463D-8B95-CFBBB2F13C2E}</Project>
+      <Name>External Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

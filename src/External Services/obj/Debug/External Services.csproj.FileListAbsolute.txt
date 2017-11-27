@@ -1,0 +1,6 @@
+C:\Users\gabri\source\repos\Esperanto\src\External Services\bin\Debug\External Services.dll.config
+C:\Users\gabri\source\repos\Esperanto\src\External Services\bin\Debug\External Services.dll
+C:\Users\gabri\source\repos\Esperanto\src\External Services\bin\Debug\External Services.pdb
+C:\Users\gabri\source\repos\Esperanto\src\External Services\obj\Debug\External Services.csproj.CoreCompileInputs.cache
+C:\Users\gabri\source\repos\Esperanto\src\External Services\obj\Debug\External Services.dll
+C:\Users\gabri\source\repos\Esperanto\src\External Services\obj\Debug\External Services.pdb
