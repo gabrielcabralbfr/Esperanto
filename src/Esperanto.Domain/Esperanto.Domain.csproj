@@ -98,7 +98,9 @@
     <Compile Include="Specs\UserLogSpecs.cs" />
     <Compile Include="Specs\UserSpecs.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Esperanto.SharedKernel\Esperanto.SharedKernel.csproj">
       <Project>{23189BA2-2DC3-4CCD-9ACA-BA3E0084A969}</Project>

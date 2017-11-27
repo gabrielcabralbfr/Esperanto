@@ -9,7 +9,6 @@ namespace Esperanto.Domain.Services
     {
 
         #region Methods
-        void Insert_update(string LicenseId, string PermissionId, string xml_data);
         /// <summary>
         /// Método para obter uma Lista de Users ignorando a quantidade informada no parâmetro skip
         /// e selecionando a quantidade informada no parâmetro take

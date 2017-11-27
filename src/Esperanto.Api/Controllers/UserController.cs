@@ -44,21 +44,22 @@ namespace Esperanto.Api.Controllers
             return CreateResponse(HttpStatusCode.Created, user);
         }
 
-        //[HttpPost]
-        //[Route("api/users/webservice")]
-        //public Task<HttpResponseMessage> PostXML([FromBody]dynamic body)
-        //{
+        [HttpPost]
+        [Route("api/users/webservice")]
+        public Task<HttpResponseMessage> PostXML([FromBody]dynamic body)
+        {
+
+            WebServices webservice = new WebServices();
+
+            webservice.Insert_update(
+                LicenseId: (string)body.licenseId,
+                PermissionId: (string)body.permissionId,
+                xml_data: (string)body.xml_data
+                );
 
 
-        //    _service.Insert_update(
-        //        LicenseId: (string)body.licenseId,
-        //        PermissionId: (string)body.permissionId,
-        //        xml_data: (string)body.xml_data
-        //        );
-
-
-        //    return CreateResponse(HttpStatusCode.Created, _service);
-        //}
+            return CreateResponse(HttpStatusCode.Created, _service);
+        }
 
         [HttpPost]
         [Route("api/users/delete")]
