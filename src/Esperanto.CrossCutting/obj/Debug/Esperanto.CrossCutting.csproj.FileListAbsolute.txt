@@ -42,6 +42,7 @@ C:\Users\gabri\source\repos\Esperanto\src\Esperanto.CrossCutting\bin\Debug\Esper
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.CrossCutting\bin\Debug\Esperanto.Domain.dll
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.CrossCutting\bin\Debug\Esperanto.Infrastructure.dll
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.CrossCutting\bin\Debug\GTL.WebStore.SharedKernel.dll
+C:\Users\gabri\source\repos\Esperanto\src\Esperanto.CrossCutting\bin\Debug\External Services.dll
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.CrossCutting\bin\Debug\EntityFramework.dll
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.CrossCutting\bin\Debug\Esperanto.ApplicationService.pdb
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.CrossCutting\bin\Debug\Esperanto.ApplicationService.dll.config
@@ -49,6 +50,8 @@ C:\Users\gabri\source\repos\Esperanto\src\Esperanto.CrossCutting\bin\Debug\Esper
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.CrossCutting\bin\Debug\Esperanto.Infrastructure.pdb
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.CrossCutting\bin\Debug\Esperanto.Infrastructure.dll.config
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.CrossCutting\bin\Debug\GTL.WebStore.SharedKernel.pdb
+C:\Users\gabri\source\repos\Esperanto\src\Esperanto.CrossCutting\bin\Debug\External Services.pdb
+C:\Users\gabri\source\repos\Esperanto\src\Esperanto.CrossCutting\bin\Debug\External Services.dll.config
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.CrossCutting\bin\Debug\EntityFramework.xml
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.CrossCutting\obj\Debug\Esperanto.CrossCutting.csprojResolveAssemblyReference.cache
 C:\Users\gabri\source\repos\Esperanto\src\Esperanto.CrossCutting\obj\Debug\Esperanto.CrossCutting.csproj.CoreCompileInputs.cache

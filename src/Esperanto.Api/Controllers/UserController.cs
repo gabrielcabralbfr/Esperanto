@@ -46,21 +46,6 @@ namespace Esperanto.Api.Controllers
         }
 
         [HttpPost]
-        [Route("api/users/insert_update")]
-        public Task<HttpResponseMessage> PostXML([FromBody]dynamic body)
-        {
-
-            WebServices.InsertUpdate(
-                licenseId: (string)body.licenseId,
-                permissionId: (string)body.permissionId,
-                xmlData: (string)body.xml_data
-                );
-
-
-            return CreateResponse(HttpStatusCode.Created, _service);
-        }
-
-        [HttpPost]
         [Route("api/users/delete")]
         public Task<HttpResponseMessage> DeleteUser([FromBody]dynamic body)
         {

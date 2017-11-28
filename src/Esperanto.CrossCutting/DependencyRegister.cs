@@ -1,4 +1,6 @@
-﻿using Esperanto.ApplicationService.Services;
+﻿using Esperanto.ApplicationService.External_Services;
+using Esperanto.ApplicationService.Services;
+using Esperanto.Domain.ExternalServices;
 using Esperanto.Domain.Repositories;
 using Esperanto.Domain.Services;
 using Esperanto.Infrastructure.Context;
@@ -36,6 +38,8 @@ namespace Esperanto.CrossCutting
             container.Register<IProjectAppService, ProjectAppService>(Lifestyle.Scoped);
             container.Register<IUserLogAppService, UserLogAppService>(Lifestyle.Scoped);
             container.Register<IUserAppService, UserAppService>(Lifestyle.Scoped);
+
+            container.Register<IWebServices, WebServicesAppService>(Lifestyle.Scoped);
         }
     }
 }
